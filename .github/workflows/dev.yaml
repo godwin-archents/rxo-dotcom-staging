@@ -15,5 +15,7 @@ jobs:
       with:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
         WPE_ENV: rxoincstg
+        SRC_PATH: "wp-content/themes/rxo/pipeline"
+        REMOTE_PATH: "wp-content/themes/rxo"
         # Deploy Options
         CACHE_CLEAR: TRUE

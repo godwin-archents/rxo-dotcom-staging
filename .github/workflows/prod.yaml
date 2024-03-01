@@ -14,7 +14,7 @@ jobs:
       uses: wpengine/github-action-wpe-site-deploy@v3
       with:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
-        WPE_ENV: rxoincstg
+        WPE_ENV: <<Update-Prod-Env-Once-Ready>>
         # Deploy Options
         REMOTE_PATH: "wp-content/"
         CACHE_CLEAR: TRUE
