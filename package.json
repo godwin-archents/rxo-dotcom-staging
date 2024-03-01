@@ -1,20 +1,19 @@
 {
-	"name": "newco",
-	"version": "1.0.0",
-	"description": "Logistics solutions",
-	"main": "index.js",
-	"repository": "git@github.com:archents-india/newcode.git",
-	"author": "newco",
-	"license": "ISC",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"scss": "sass --watch --no-source-map wp-content/themes/rxo/css/all.scss:wp-content/themes/rxo/css/all.css"
-	},
-	"dependencies": {
-		"@popperjs/core": "^2.11.6",
-		"bootstrap": "^5.2.3",
-		"sass": "^1.57.1",
-		"scss": "^0.2.4",
-		"yarn": "^1.22.19"
-	}
+  "name": "rxo",
+  "version": "1.0.0",
+  "description": "RXO - Smart solutions to move your freight.",
+  "main": "index.js",
+  "repository": "git@github.com",
+  "author": "rxo",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "sass": "^1.57.1",
+    "scss": "^0.2.4",
+    "yarn": "^1.22.19"
+  }
 }

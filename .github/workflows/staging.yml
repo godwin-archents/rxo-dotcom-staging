@@ -2,6 +2,7 @@ name: Deploy to Staging
 on:
   push:
     branches:
+    - 'releases/**'
     - staging
 jobs:
   build:
@@ -12,7 +13,8 @@ jobs:
       uses: wpengine/github-action-wpe-site-deploy@v3
       with:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
-        WPE_ENV: rxoincstg
+        WPE_ENV: rxostaging
         # Deploy Options
-        REMOTE_PATH: "wp-content/"
+        SRC_PATH: "wp-content/themes/rxo"
+        REMOTE_PATH: "wp-content/themes/rxo"
         CACHE_CLEAR: TRUE
