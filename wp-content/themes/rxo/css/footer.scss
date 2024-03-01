@@ -1,0 +1,164 @@
+footer {
+
+	/*
+	*
+	* SM - Mobile
+	* Space between RXO logo and the links has been changed from 48px to 40px
+	* 
+	* MD
+	* 
+	* Flex direction has been changed to column, matching the SM screen
+	* Maintains 3 columns for links with a minimum width of 140px
+	* Once the column reaches 140px, the rightmost column should wrap to the second line (as appears in the SM screens)
+	*/
+	.rxo-footer-logo {
+		margin-bottom: 2.5rem !important;
+		text-align: left;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 3rem !important;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 7rem !important;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 7rem !important;
+		}
+	}
+
+	#menu-footer-social {
+		li {
+			--#{$prefix}nav-link-padding-y: 0;
+			padding: 0 1rem 0 0;
+			--#{$prefix}icon-color: var(--#{$prefix}white);
+			--#{$prefix}icon-width: 1.5rem;
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			.nav-link {
+				font-size: 0;
+
+				&::after {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: var(--#{$prefix}icon-width);
+					height: var(--#{$prefix}icon-width);
+					margin: 0;
+					transition: all 0.15s ease-in-out;
+					background: var(--#{$prefix}icon-color);
+					mask-image: var(--icon-uri);
+					-webkit-mask-image: var(--icon-uri);
+				}
+			}
+		}
+	}
+
+	#menu-footer-privacy {
+		li {
+			border-right: 1px solid;
+			display: inline-block;
+			padding: 0 1rem 0 0;
+			margin: 0 1rem 0 0;
+
+			--#{$prefix}nav-link-padding-y: 0;
+
+			&:last-child {
+				border-right: 0;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+
+	#menu-footer-primary {
+			
+			gap: 1.5rem !important;
+
+			@include media-breakpoint-up(lg) {
+				gap: 2rem !important;
+			}
+	
+			@include media-breakpoint-up(xl) {
+				gap: 2rem !important;
+			}
+
+		> .dropdown {
+			min-width: auto;
+			width: 33.33333333%;
+
+			@include media-breakpoint-up(md) {
+				min-width: 140px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				min-width: auto;
+			}
+
+			@include media-breakpoint-up(xl) {
+				min-width: auto;
+			}
+			
+		}
+
+		.dropdown .dropdown {
+			margin-top: 1rem;
+		}
+
+		.dropdown > .dropdown-item,
+		.dropdown-toggle {
+			color: var(--#{$prefix}primary);
+			font-weight: 600;
+			pointer-events: none;
+			margin-bottom: 0.75rem;
+		}
+
+		.dropdown-menu {
+			--#{$prefix}dropdown-padding-x: 0;
+			--#{$prefix}dropdown-padding-y: 0;
+			--#{$prefix}dropdown-spacer: 0;
+			--#{$prefix}dropdown-font-size: 0.875rem;
+			--#{$prefix}dropdown-color: var(--#{$prefix}white);
+			--#{$prefix}dropdown-bg: transparent;
+			--#{$prefix}dropdown-border-radius: 0;
+			--#{$prefix}dropdown-border-width: 0;
+			--#{$prefix}dropdown-inner-border-radius: 0;
+			--#{$prefix}dropdown-box-shadow: none;
+			--#{$prefix}dropdown-link-color: var(--#{$prefix}white);
+			--#{$prefix}dropdown-link-hover-color: var(--#{$prefix}white);
+			--#{$prefix}dropdown-link-hover-bg: transparent;
+			--#{$prefix}dropdown-link-active-color: var(--#{$prefix}white);
+			--#{$prefix}dropdown-link-active-bg: transparent;
+			--#{$prefix}dropdown-item-padding-x: 0rem;
+			--#{$prefix}dropdown-item-padding-y: 0.25rem;
+			position: relative !important;
+			display: block !important;
+			min-width: auto;
+		}
+
+		.dropdown-item {
+			width: auto;
+			display: inline-block;
+			white-space: normal;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		#copyright-container {
+			position: absolute;
+			transform: translateY(-100%);
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		#copyright-container {
+			.navbar-nav {
+				justify-content: center;
+			}
+		}
+	}
+}

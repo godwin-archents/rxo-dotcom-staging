@@ -1,0 +1,41 @@
+/******** Theme colors (Bootstrap variables) **********/
+body {
+	--primary-header-height: 5rem;
+	--secondary-header-height: 0rem;
+	--header-height: calc(var(--primary-header-height) + var(--secondary-header-height));
+	--logo-height: 36px;
+	--screen-height: calc(100vh - var(--header-height));
+
+	--#{$prefix}gutter-x: #{$grid-gutter-width};
+	--#{$prefix}gutter-y: 0;
+
+	@include media-breakpoint-up(md) {
+		& {
+			// --#{$prefix}gutter-x: 4rem;
+			--#{$prefix}gutter-x: 1rem;
+			--#{$prefix}gutter-y: 0;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		& {
+			// --#{$prefix}gutter-x: 6rem;
+			--#{$prefix}gutter-x: 1.5rem;
+			--#{$prefix}gutter-y: 0;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		& {
+			// --#{$prefix}gutter-x: 7.5rem;
+			--#{$prefix}gutter-x: 2rem;
+			--#{$prefix}gutter-y: 0;
+		}
+	}
+
+	&.has-secondary-header {
+		@include media-breakpoint-up(xl) {
+			& {
+				--secondary-header-height: 2.75rem;
+			}
+		}
+	}
+}

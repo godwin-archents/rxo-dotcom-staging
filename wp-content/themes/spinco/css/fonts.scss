@@ -1,0 +1,17 @@
+
+@font-face {
+	font-family: "Sora-Regular";
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: local("Sora"), local("Sora-Regular"),
+		url("./../fonts/Sora-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Sora-Medium";
+	font-style: normal;
+	font-weight: 600;
+	font-display: block;
+	src: local("Sora Medium"), local("Sora-Medium"),
+		url("./../fonts/Sora-Medium.ttf") format("ttf");
+}

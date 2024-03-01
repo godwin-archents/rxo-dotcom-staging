@@ -1,0 +1,24 @@
+footer {
+	border-top: 2px solid #404040 !important;
+	#menu-footer-social {
+		display: block;
+		li {
+			display: inline-block;
+			width: auto;
+			padding-right: 1.25rem;
+		}
+	}
+	.navbar-nav .nav-link {
+		color: var(--#{$prefix}primary);
+		text-decoration: underline !important;
+		line-height: 1.75;
+	}
+
+	@media (max-width: 599px) {
+		#menu-footer-social {
+			li {
+				display: block;
+			}
+		}
+	}
+}

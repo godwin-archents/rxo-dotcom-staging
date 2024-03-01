@@ -1,0 +1,93 @@
+.post-type-page.block-editor-page .editor-styles-wrapper .wp-block-post-title{
+	display:none !important;
+}
+
+#main-section{
+	display: none;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	opacity: 0.9;
+	background: #222;
+	z-index: 40000;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	animation-name: fadeIn_Container;
+	animation-duration: 1s;
+}
+
+
+.form-page-title {
+	display: block;
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+}
+  
+.customModal {
+	display:none;
+	top: 35%;
+	left: 25%;
+	min-width: 250px;
+	width: 40%;
+	margin: 0 auto;
+	position: fixed;
+	z-index: 40001;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #000;
+	/* margin-top: 30px; */
+	/* margin-left: 25%; */
+	padding: 20px !important;
+
+	animation-name: fadeIn_Modal;
+	animation-duration: 0.8s;
+}
+  
+.headerModal{
+	width: 100%;
+	height: 20px;
+}
+  
+.headerModal a {
+	text-decoration: none;
+	float: right;
+	line-height: 40px;
+	margin-right: 15px;
+	color: #aaa;
+}
+  
+.contentModal{
+	width: 100%;
+	height: auto;
+}
+  
+ form .contentModal{
+	margin-top: 20px;
+ }
+  
+form .contentModal label {
+	display: block;
+	font-size: 1rem;
+}
+  
+form .contentModal input {
+	border-radius: 3px;
+	display: block;
+	margin: 20px 0 !important;
+	padding: 5px 10px;
+	width: 100%;
+}
+  
+.footerModal button {
+	float: left;
+	background: #00F49C;
+	color: #444 !important;
+	cursor: pointer;
+	padding: 10px 15px;
+	border: 0 none;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+}

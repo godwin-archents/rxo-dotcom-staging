@@ -1,0 +1,1093 @@
+# Translation of Plugins - Limit Login Attempts Reloaded - Stable (latest release) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - Limit Login Attempts Reloaded - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-01-23 07:52:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - Limit Login Attempts Reloaded - Stable (latest release)\n"
+
+#: views/tab-settings.php:196
+msgid "Add this code to all websites in your network to sync protection (payment required for additional domains unless subscribed to Agency plan)."
+msgstr "將這個代碼加入受你管理的全部網站中，便能同步進行保護 (需要購買 Agency 方案，否則額外的網域需要付費)。"
+
+#: views/tab-premium.php:158
+msgid "Receive 1 on 1 technical support via email for any issues. Free support availabe in the <a href=\"https://wordpress.org/support/plugin/limit-login-attempts-reloaded/\" target=\"_blank\">WordPress support forum</a>."
+msgstr "如有任何問題，都可以透過電子郵件進行一對一技術支援。<a href=\"https://wordpress.org/support/plugin/limit-login-attempts-reloaded/\" target=\"_blank\">WordPress 技術支援論壇</a>提供免費方案的技術支援。"
+
+#: views/tab-premium.php:148
+msgid "Lockouts & safelists/blocklists can be shared between multiple domains to enhance protection."
+msgstr "可以跨多個網域分享登入鎖定設定及安全清單/封鎖清單以加強保護。"
+
+#: views/tab-premium.php:147
+msgid "Synchronize Lockouts & Safelists/Blocklists"
+msgstr "同步登入鎖定設定及安全清單/封鎖清單"
+
+#: views/tab-premium.php:137
+msgid "Use active IP database via the cloud to automatically block users before they are able to make a failed login."
+msgstr "在惡意 IP 位址嘗試登入失敗前，使用雲端主動式 IP 位址資料庫自動封鎖這類 IP 位址。"
+
+#: views/tab-premium.php:136
+msgid "Intelligent IP Blocking"
+msgstr "智慧型 IP 位址封鎖技術"
+
+#: views/tab-premium.php:127
+msgid "Use system wide data from over 10,000 WordPress websites to identify and block malicious IPs. This is an active list in real-time."
+msgstr "使用超過 10,000 個 WordPress 網站的系統資料 (即時活動清單) 以識別並封鎖惡意行為 IP 位址。"
+
+#: views/tab-premium.php:126
+msgid "Access Active Cloud Blocklist"
+msgstr "存取主動式雲端封鎖清單"
+
+#: views/tab-premium.php:117
+msgid "Automatically add malicious IPs to your blocklist when triggered by the system."
+msgstr "當偵測到符合惡意行為的 IP 位址時，自動將這個 IP 位址加入網站的封鎖清單。"
+
+#: views/tab-premium.php:116
+msgid "Auto IP Blocklist"
+msgstr "自動將具備惡意企圖的 IP 位址加入封鎖清單"
+
+#: views/tab-premium.php:107
+msgid "Add another layer of protection from brute force bots by accessing a global database of known IPs with malicious activity."
+msgstr "透過存取曾進行惡意活動的 IP 位址的全球資料庫，為網站防範密碼暴力破解機器人多加一層保護。"
+
+#: views/tab-premium.php:106
+msgid "Access Blocklist of Malicious IPs"
+msgstr "存取惡意 IP 位址封鎖清單"
+
+#: views/tab-premium.php:97
+msgid "Disable IPs from any region to disable logins."
+msgstr "可依需求禁止任何國家/地區的 IP 位址以封鎖登入嘗試。"
+
+#: views/tab-premium.php:96
+msgid "Block By Country"
+msgstr "依據國家進行封鎖"
+
+#: views/tab-premium.php:91
+msgid "300k requests per month"
+msgstr "每月 300,000 次要求"
+
+#: views/tab-premium.php:87
+msgid "200k requests per month"
+msgstr "每月 200,000 次要求"
+
+#: views/tab-premium.php:83
+msgid "100k requests per month"
+msgstr "每月 100,000 次要求"
+
+#: views/tab-premium.php:77
+msgid "Absorb failed login attempts from brute force bots in the cloud to keep your website at its optimal performance."
+msgstr "由我們提供的雲端服務承受來自暴力密碼破解機器人的失敗登入嘗試，以維持網站的最佳性能。"
+
+#: views/tab-premium.php:67
+msgid "Configurable Lockout Timing"
+msgstr "登入鎖定條件組態"
+
+#: views/tab-premium.php:58
+msgid "Limit Number of Retry Attempts"
+msgstr "重複登入嘗試限制次數"
+
+#: views/tab-premium.php:51 views/tab-premium.php:167
+msgid "Installed"
+msgstr "已安裝"
+
+#: views/tab-premium.php:47
+msgid "Professional"
+msgstr "Professional 方案"
+
+#: views/tab-premium.php:46
+msgid "Premium+"
+msgstr "Premium+ 方案"
+
+#: views/tab-premium.php:45
+msgid "Premium"
+msgstr "Premium 方案"
+
+#: views/tab-premium.php:44
+msgid "Free"
+msgstr "免費方案"
+
+#: views/tab-premium.php:38
+msgid "Features comparison"
+msgstr "功能比較"
+
+#: views/tab-premium.php:35
+msgid "Although the free version offers great protection, the premium version includes an important feature called <b>IP Intelligence</b>. With IP intelligence, your website will be able to identify malicious IPs before they attempt a login, and absorb them into the cloud to save system resources. Your site will not only be more secure, but will operate at its optimal performance."
+msgstr "免費方案雖以提供網站絕佳的保護，但是付費方案包含稱為 <b>IP Intelligence</b> (智慧型 IP 位址) 的重要功能；透過 IP Intelligence 功能，網站便能在惡意 IP 位址嘗試登入前，主動識別出惡意 IP 位址，並由我們的雲端服務承受這些惡意 IP 位址的登入嘗試，以節省網站系統資源。如此一來，網站不僅會更加安全，還能發揮出最佳效能。"
+
+#: views/tab-premium.php:34
+msgid "Why Should I Consider Premium?"
+msgstr "網站需要使用付費方案的原因"
+
+#: views/tab-premium.php:29
+msgid "If you purchased a premium plan, check your email for setup instructions (key included)"
+msgstr "如果已購買付費方案，請檢查電子郵件中包含授權金鑰的設定說明。"
+
+#: views/tab-premium.php:28
+msgid "You are currently using the free version of <strong>Limit Login Attempts Reloaded</strong>."
+msgstr "這個網站目前使用的是 <strong>Limit Login Attempts Reloaded</strong> 免費版。"
+
+#: views/tab-premium.php:24
+msgid "Goes to LLAR checkout page"
+msgstr "前往 Limit Login Attempts Reloaded 結帳頁面"
+
+#: views/tab-premium.php:23
+msgid "Get It Here"
+msgstr "購買授權"
+
+#: views/tab-premium.php:19
+msgid "Support"
+msgstr "技術支援"
+
+#: views/tab-premium.php:18
+msgid "Ask a pre-sales question"
+msgstr "詢問售前問題"
+
+#: views/tab-premium.php:17
+msgid "Pre-sales FAQs"
+msgstr "售前常見問題集"
+
+#: views/tab-premium.php:16
+msgid "Full feature list"
+msgstr "完整功能清單"
+
+#: views/tab-premium.php:14
+msgid "Limit Login Attempts Reloaded <strong>Premium</strong>"
+msgstr "Limit Login Attempts Reloaded <strong>付費方案</strong>"
+
+#: views/tab-help.php:68
+msgid "What URLs are being attacked and protected?"
+msgstr "哪些網址會遭到攻擊並應該加以保護？"
+
+#: views/tab-help.php:67
+msgid "I just installed LLAR and I'm already getting several failed login attempts"
+msgstr "網站安裝 Limit Login Attempts Reloaded 後，馬上發生登入嘗試失敗的狀況"
+
+#: views/tab-help.php:66
+msgid "What do I do if all users get blocked?"
+msgstr "如果全部使用者遭到封鎖，網站管理員應該怎麼處理？"
+
+#: views/tab-help.php:65
+msgid "What happens if my site exceeds the request limits in the plan?"
+msgstr "如果網站超出目前方案的要求上限，會發生什麼狀況？"
+
+#: views/tab-help.php:64
+msgid "The Logs tab: How the system works"
+msgstr "[記錄] 分頁: 系統的工作方式"
+
+#: views/tab-help.php:63
+msgid "Could these failed login attempts be fake?"
+msgstr "這些登入嘗試失敗是否會造假？"
+
+#: views/tab-help.php:62
+msgid "Why am I still seeing login attempts even after the IP got blocked?"
+msgstr "為何在 IP 位址遭到封鎖後，仍能看到登入嘗試？"
+
+#: views/tab-help.php:61
+msgid "What do I do if the admin gets blocked?"
+msgstr "如果網站管理員遭到封鎖，該如何解決？"
+
+#: views/tab-help.php:60
+msgid "How can I tell that the premium plugin is working?"
+msgstr "如何判斷付費版外掛是否如預期般執行？"
+
+#: views/tab-help.php:59
+msgid "How do I know if I'm under attack?"
+msgstr "如何得知網站正在遭受攻擊？"
+
+#: views/tab-help.php:57
+msgid "Top Topics and Questions"
+msgstr "熱門主題及問題"
+
+#: views/tab-help.php:53
+msgid "Questions regarding premium software sales."
+msgstr "與付費服務銷售相關的問題。"
+
+#: views/tab-help.php:52
+msgid "Pre-sales Questions"
+msgstr "售前問題"
+
+#: views/tab-help.php:49
+msgid "Questions regarding updating billing info, cancellation, and expiration."
+msgstr "與更新帳單資訊、取消約期授權及約期授權到期相關的問題。"
+
+#: views/tab-help.php:48
+msgid "Accounts & Billing"
+msgstr "帳號及帳單"
+
+#: views/tab-help.php:45
+msgid "Popular technical questions about the service including admin blocking, definitions, and email notifications."
+msgstr "與服務相關的常見技術問題，包含網站管理員遭到封鎖、定義及電子郵件通知。"
+
+#: views/tab-help.php:44
+msgid "Technical Questions"
+msgstr "技術問題"
+
+#: views/tab-help.php:41
+msgid "Questions regarding the cloud service including how to activate, logs and storage, and compliance."
+msgstr "與雲端服務相關的問題，包含啟用方式、記錄、儲存空間及合規性。"
+
+#: views/tab-help.php:40
+msgid "Cloud Service & Security"
+msgstr "雲端服務及安全性"
+
+#: views/tab-help.php:36
+msgid "All Documentation"
+msgstr "線上說明"
+
+#: views/tab-help.php:34
+msgid "GDPR Information"
+msgstr "GDPR 資訊"
+
+#: views/tab-help.php:28
+msgid "Go To Support Forums"
+msgstr "前往技術支援論壇"
+
+#: views/tab-help.php:26
+msgid "Support for free customers is available via our forums page on WordPress.org. The majority of requests <b>receive an answer within a few days</b>."
+msgstr "使用免費方案的使用者，可以透過 WordPress.org 的技術論壇取得技術支援。大多數的要求<b>會在幾天內得到回覆</b>。"
+
+#: views/tab-help.php:25
+msgid "Free Support"
+msgstr "免費技術支援"
+
+#: views/tab-help.php:20
+msgid "Starting from $7.99/month"
+msgstr "每月美金 7.99 元起"
+
+#: views/tab-help.php:16
+msgid "Our technical support team is available by email to help with any questions."
+msgstr "我們的技術支援團隊可以透過電子郵件協助解決相關問題。"
+
+#: views/tab-help.php:15
+msgid "Upgrade Now to Access Premium Support"
+msgstr "立即升級至以存取付費方案技術支援"
+
+#: views/tab-debug.php:54
+msgid "Version"
+msgstr "版本"
+
+#: views/tab-dashboard.php:322
+msgid "Attempts"
+msgstr "嘗試次數"
+
+#: views/options-page.php:54
+msgid "Premium / Extensions"
+msgstr "付費方案/擴充功能"
+
+#: views/options-page.php:34
+msgid "Yes, enable auto-update"
+msgstr "是，啟用自動更新"
+
+#: views/options-page.php:33
+msgid "Do you want Limit Login Attempts Reloaded to provide the latest version automatically?"
+msgstr "是否需要 Limit Login Attempts Reloaded 自動提供最新版本？"
+
+#: views/app-widgets/event-log.php:43
+msgid "Loading older events, skipping ACL events. <a href=\"%s\" target=\"_blank\">Full logs</a>"
+msgstr "載入較舊的事件，略過存取控制清單事件。<a href=\"%s\" target=\"_blank\">完整記錄</a>"
+
+#: views/app-widgets/event-log.php:39
+msgid "Load older events"
+msgstr "載入較舊的事件"
+
+#: views/admin-dashboard-widgets.php:36 views/tab-dashboard.php:38
+msgid "Your site is currently at a high risk for brute force activity. Consider <a href=\"%s\" target=\"_blank\">premium protection</a> if frequent attacks persist or website performance is degraded"
+msgstr "這個網站目前處理高暴力密碼破解風險中。如果頻繁攻擊持續存在或網站效能下滑，請考慮購買<a href=\"%s\" target=\"_blank\">付費保護方案</a>。"
+
+#: views/admin-dashboard-widgets.php:31 views/tab-dashboard.php:33
+msgid "Your site is currently at a low risk for brute force activity"
+msgstr "這個網站目前處理低暴力密碼破解風險中。"
+
+#: core/LimitLoginAttempts.php:1137
+msgid "Failed login by IP %s"
+msgstr "IP 位址 %s 的登入失敗嘗試"
+
+#: views/tab-dashboard.php:64
+msgid "Premium protection enabled"
+msgstr "付費方案保護功能已啟用"
+
+#: views/onboarding-popup.php:102
+msgid "Continue"
+msgstr "繼續"
+
+#: views/onboarding-popup.php:85
+msgid "Complete Limit Login Attempts Reloaded Installation"
+msgstr "完成 Limit Login Attempts Reloaded 的安裝"
+
+#: views/onboarding-popup.php:71
+msgid "Please Complete Limit Login Attempts Reloaded Installation"
+msgstr "請完成 Limit Login Attempts Reloaded 的安裝"
+
+#: views/onboarding-popup.php:58 views/options-page.php:34
+msgid "No thanks"
+msgstr "不用了，謝謝"
+
+#: views/onboarding-popup.php:55
+msgid "Starting from $8/month"
+msgstr "每月美金 8 元起"
+
+#: views/onboarding-popup.php:55 views/tab-help.php:19
+msgid "Upgrade To Premium"
+msgstr "升級至付費方案"
+
+#: views/onboarding-popup.php:52
+msgid "If you don't have one, you can purchase one now."
+msgstr "如果沒有安裝代碼，請立即購買。"
+
+#: views/onboarding-popup.php:50
+msgid "Or"
+msgstr "或"
+
+#: views/onboarding-popup.php:45
+msgid "Install"
+msgstr "安裝"
+
+#: views/onboarding-popup.php:40
+msgid "Enter Setup Code"
+msgstr "輸入安裝代碼"
+
+#: views/onboarding-popup.php:37
+msgid "Enter your setup code to enable cloud protection. This will provide the highest level of security and performance during brute force attacks."
+msgstr "請輸入專屬設定代碼以啟用雲端保護功能。雲端保護功能會在網站遭到暴力密碼破解攻擊時，提供最好的安全性及效能保護。"
+
+#: views/onboarding-popup.php:36
+msgid "Activate Premium"
+msgstr "啟用付費方案"
+
+#: views/onboarding-popup.php:26
+msgid "No"
+msgstr "否"
+
+#: views/onboarding-popup.php:25
+msgid "Yes"
+msgstr "是"
+
+#: views/onboarding-popup.php:23
+msgid "Would you also like to join our email newsletter to receive plugin updates, WordPress security news, and other relevant content?"
+msgstr "是否想要訂閱我們的電子報以接收外掛更新、WordPress 安全性新聞及其他相關內容？"
+
+#: views/onboarding-popup.php:20
+msgid "We do not use this email address for any other purpose unless you opt-in to receive other mailings. You can turn off alerts in the settings."
+msgstr "除非選擇接收其他電子郵件，否則我們不會將這個電子郵件地址用於其他目的。這項通知可在設定中關閉。"
+
+#: views/onboarding-popup.php:17
+msgid "Please tell us where Limit Login Attempts Reloaded should send security notifications for your website?"
+msgstr "請設定 Limit Login Attempts Reloaded 傳送這個網站的安全性通知的方式。"
+
+#: views/app-widgets/active-lockouts.php:10
+msgid "Reload"
+msgstr "重新載入"
+
+#: views/tab-settings.php:189
+msgid "Edit"
+msgstr "編輯"
+
+#: core/LimitLoginAttempts.php:1186
+msgid ""
+"<p><i>This alert was sent by your website where Limit Login Attempts Reloaded free version \n"
+"is installed and you are listed as the admin. If you are a GoDaddy customer, the plugin is installed \n"
+"into a must-use (MU) folder.</i></p>"
+msgstr "<p><b>這是由網站上的 Limit Login Attempts Reloaded 免費版傳送給網站管理員的通知。如果你是 GoDaddy 的客戶，這個外掛會安裝至 wp-content/mu-plugins 資料夾。</b></p>"
+
+#: views/app-widgets/acl-rules.php:8 views/app-widgets/acl-rules.php:35
+msgid "Documentation"
+msgstr "線上說明"
+
+#: views/tab-settings.php:114
+msgid "Show Warning Badge"
+msgstr "顯示警告徽章"
+
+#: views/admin-dashboard-widgets.php:35 views/tab-dashboard.php:37
+msgid "Warning: Your site is experiencing over 100 failed login attempts today"
+msgstr "警告: 這個網站今天發生超過 100 次登入嘗試失敗。"
+
+#. Description of the plugin
+msgid "Block excessive login attempts and protect your site against brute force attacks. Simple, yet powerful tools to improve site performance."
+msgstr "封鎖過度的登入嘗試，並保護網站免受暴力密碼破解攻擊，是簡單、實用、能改善網站效能的工具。"
+
+#: views/tab-settings.php:107
+msgid "Hide Dashboard Widget"
+msgstr "隱藏控制台小工具"
+
+#: views/tab-dashboard.php:340
+msgid "Block by country feature available with <a href=\"https://www.limitloginattempts.com/info.php?from=plugin-dashboard-country\" target=\"_blank\">premium plus plan</a>."
+msgstr "<a href=\"https://www.limitloginattempts.com/info.php?from=plugin-dashboard-country\" target=\"_blank\">Premium+</a> 方案提供依據國家進行封鎖的功能。"
+
+#: views/app-widgets/event-log.php:12
+msgid "All attempts blocked by access rules are hidden by default. You can see the full log at this link."
+msgstr "預設會隱藏由登入存取規則所封鎖的全部登入嘗試。網站管理員可以透過這個連結檢視完整記錄。"
+
+#: views/app-widgets/event-log.php:11
+msgid "Full Logs"
+msgstr "完整記錄"
+
+#: views/tab-settings.php:79
+msgid "You can use a shortcode here to insert links, for example, a link to your Privacy Policy page. <br>The shortcode is: [llar-link url=\"https://example.com\" text=\"Privacy Policy\"]"
+msgstr "使用顯示於下方的短代碼，便能插入連結；舉例來說，插入這個網站的〈隱私權政策〉頁面連結。<br>短代碼: [llar-link url=\"https://example.com\" text=\"隱私權政策\"]"
+
+#: views/tab-settings.php:71
+msgid "this makes the plugin <a href=\"https://gdpr-info.eu/\" target=\"_blank\">GDPR</a> compliant by showing a message on the login page. <a href=\"https://www.limitloginattempts.com/gdpr-qa/?from=plugin-settings-gdpr\" target=\"_blank\">Read more</a>"
+msgstr "啟用這項設定後，顯示於登入頁面的訊息，能讓外掛的資料記錄方式符合 <a href=\"https://gdpr-info.eu/\" target=\"_blank\">GDPR</a> 合規性。<a href=\"https://www.limitloginattempts.com/gdpr-qa/?from=plugin-settings-gdpr\" target=\"_blank\">進一步了解</a>"
+
+#: core/LimitLoginAttempts.php:1192
+msgid "<hr><a href=\"%s\">Unsubscribe</a> from these notifications."
+msgstr "<hr><a href=\"%s\">取消訂閱</a>外掛相關通知。"
+
+#: core/LimitLoginAttempts.php:1141
+msgid ""
+"<p>Hello%1$s,</p>\n"
+"<p>%2$d failed login attempts (%3$d lockout(s)) from IP <b>%4$s</b><br>\n"
+"Last user attempted: <b>%5$s</b><br>\n"
+"IP was blocked for %6$s</p>\n"
+"<p>This notification was sent automatically via Limit Login Attempts Reloaded Plugin. \n"
+"<b>This is installed on your %7$s WordPress site. <a href=\"%8$s\" target=\"_blank\">Please login to your WordPress</a> dashboard to view more info.</b></p><p>Experiencing frequent attacks or degraded performance? Try our <a href=\"%9$s\" target=\"_blank\">advanced protection</a>. Have Questions? Visit our <a href=\"%10$s\" target=\"_blank\">help section</a>.</p>"
+msgstr ""
+"<p>%1$s，你好，</p>\n"
+"<p>來自 IP 位址 <b>%4$s</b> 的登入嘗試已失敗 %2$d 次 (%3$d 次登入鎖定)<br>\n"
+"最後嘗試登入的使用者：<b>%5$s</b><br>\n"
+"這個 IP 位址已遭鎖定 %6$s</p>\n"
+"<p>這封電子郵件通知由 Limit Login Attempts Reloaded 自動傳送。\n"
+"<b>這個外掛安裝於網址為 %7$s 的 WordPress 網站，<a href=\"%8$s\" target=\"_blank\">請登入至 WordPress</a> 控制台以檢視相關資訊。</b></p><p>如果網站遭到攻擊，可以試用我們提供的<a href=\"%9$s\" target=\"_blank\">進階保護</a>功能。如果有任何使用上的問題，請參考我們的<a href=\"%10$s\" target=\"_blank\">線上說明</a>。</p>"
+
+#: views/app-widgets/country-access-rules.php:15
+msgid "these countries:"
+msgstr "國家/地區清單:"
+
+#: views/app-widgets/country-access-rules.php:6
+msgid "Country Access Rules"
+msgstr "國家/地區存取規則"
+
+#: core/LimitLoginAttempts.php:99
+msgid "By proceeding you understand and give your consent that your IP address and browser information might be processed by the security plugins installed on this site."
+msgstr "如果繼續進行，代表你理解並同意你的 IP 位址及瀏覽器資訊可能會由這個網站上安裝的安全性外掛處理。"
+
+#: views/tab-settings.php:76
+msgid "GDPR message"
+msgstr "GDPR 訊息"
+
+#: views/tab-settings.php:102 views/tab-settings.php:116
+msgid "(Reload the page to see the changes)"
+msgstr "啟用這項設定後，請儲存設定並重新整理頁面以檢視變更"
+
+#: views/tab-settings.php:100
+msgid "Show top-level menu item"
+msgstr "顯示為最上層管理選單項目"
+
+#: views/admin-dashboard-widgets.php:112 views/admin-dashboard-widgets.php:164
+#: views/tab-dashboard.php:64 views/tab-dashboard.php:120
+#: views/tab-dashboard.php:171
+msgid "Failed Login Attempts"
+msgstr "登入嘗試失敗次數"
+
+#: views/admin-dashboard-widgets.php:49 views/tab-dashboard.php:51
+msgid "Failed Login Attempts Today"
+msgstr "今天的登入嘗試失敗次數"
+
+#: views/admin-dashboard-widgets.php:30 views/tab-dashboard.php:32
+#: views/tab-dashboard.php:339
+msgid "today"
+msgstr "今天"
+
+#: views/admin-dashboard-widgets.php:25 views/tab-dashboard.php:26
+msgid "Hooray! Zero failed login attempts today"
+msgstr "太棒了！今天沒有發生任何登入嘗試失敗"
+
+#: views/tab-dashboard.php:362
+msgid "Total Attempts"
+msgstr "嘗試次數總計"
+
+#: views/tab-dashboard.php:346
+msgid "Total Failed Login Attempts"
+msgstr "登入嘗試失敗次數總計"
+
+#: views/tab-dashboard.php:321
+msgid "Country"
+msgstr "國家/地區"
+
+#: views/tab-dashboard.php:316 views/tab-dashboard.php:347
+msgid "Global Network (Premium Users)"
+msgstr "全球網路 (付費方案使用者)"
+
+#: views/tab-dashboard.php:315
+msgid "Failed Login Attempts By Country"
+msgstr "登入嘗試失敗次數依國家/地區顯示"
+
+#: views/tab-dashboard.php:295
+msgid "Many options such as notifications, alerts, premium status, and more."
+msgstr "提供通知、警訊、進階狀態等功能。"
+
+#: views/tab-dashboard.php:294
+msgid "Global Options"
+msgstr "全域選項"
+
+#: views/tab-dashboard.php:286
+msgid "Find the documentation and help you need."
+msgstr "可供使用者依需求查閱的使用說明。"
+
+#: views/options-page.php:51 views/tab-dashboard.php:285
+msgid "Help"
+msgstr "使用說明"
+
+#: views/tab-dashboard.php:277
+msgid "View lockouts logs, block or whitelist usernames or IPs, and more."
+msgstr "檢視登入鎖定記錄、使用者名稱或 IP 位址的封鎖或允許等資訊。"
+
+#: views/tab-dashboard.php:276
+msgid "Tools"
+msgstr "工具"
+
+#: views/tab-dashboard.php:265
+msgid "Connect This Site"
+msgstr "連結這個網站"
+
+#: views/onboarding-popup.php:57 views/tab-dashboard.php:264
+msgid "Learn More"
+msgstr "進一步了解"
+
+#: views/tab-dashboard.php:262
+msgid "When you upgrade to premium, you can synchronize your IP safelist and blacklist between multiple sites. This is a great way to improve your network performance and slow down future attacks."
+msgstr "升級至付費版後，便能在多個網站間同步安全清單及封鎖清單的 IP 位址資料。這對改善多站網路效能及降低將來的攻擊速度很有幫助。"
+
+#: views/tab-dashboard.php:261
+msgid "Multiply Your Protection By Adding More Domains"
+msgstr "加入更多網域進行加倍保護"
+
+#: views/tab-dashboard.php:250
+msgid "Notifications"
+msgstr "通知"
+
+#: core/LimitLoginAttempts.php:354 views/tab-dashboard.php:242
+msgid "Upgrade to Premium"
+msgstr "升級至付費方案"
+
+#: views/tab-dashboard.php:240
+msgid "As a free user, your local server is absorbing the traffic brought on by brute force attacks, potentially slowing down your website. Upgrade to Premium today to outsource these attacks through our cloud app, and slow down future attacks with advanced throttling."
+msgstr "如果使用免費版本，發生暴力密碼破解攻擊時只能透過網站伺服器承受攻擊，這樣有可能會拖慢網站速度。立即升級至付費方案，便能使用我們提供的 Cloud App 在雲端承受這類攻擊，並透過進階限制方式降低將來的攻擊速度。"
+
+#: views/tab-dashboard.php:239
+msgid "Premium Protection Disabled"
+msgstr "付費方案保護功能已停用"
+
+#: views/tab-dashboard.php:60
+msgid "Limit Login Attempts Reloaded Dashboard"
+msgstr "Limit Login Attempts Reloaded 控制台"
+
+#: views/admin-dashboard-widgets.php:50 views/tab-dashboard.php:52
+msgid "All failed login attempts have been neutralized in the cloud"
+msgstr "全部失敗的登入嘗試均會在雲端完成阻擋"
+
+#: views/tab-logs-local.php:63
+msgid "Safelist"
+msgstr "安全清單"
+
+#: views/tab-premium.php:52 views/tab-premium.php:53 views/tab-premium.php:54
+#: views/tab-premium.php:168 views/tab-premium.php:169
+#: views/tab-premium.php:170
+msgid "Upgrade now"
+msgstr "立即升級"
+
+#: views/tab-premium.php:76
+msgid "Performance Optimizer"
+msgstr "效能最佳化程式"
+
+#: views/options-page.php:24
+msgid "Thank you for using the free version of <b>Limit Login Attempts Reloaded</b>. <a href=\"%s\" target=\"_blank\">Upgrade to our cloud app</a> for enhanced protection, visual metrics & premium support."
+msgstr "感謝使用免費版 <b>Limit Login Attempts Reloaded</b>。<a href=\"%s\" target=\"_blank\">升級至 Cloud App</a> 便能加強保護，並提供視覺化指標及付費技術支援。"
+
+#: views/app-widgets/active-lockouts.php:6
+msgid "Active Lockouts"
+msgstr "目前鎖定目標"
+
+#: views/admin-dashboard-widgets.php:126 views/tab-dashboard.php:134
+msgid "Requests"
+msgstr "要求"
+
+#: views/tab-logs-local.php:111
+msgid "Receive enhanced logs and visual metrics when you <a href=\"%s\" target=\"_blank\">upgrade to our cloud app</a>"
+msgstr "<a href=\"%s\" target=\"_blank\">升級至 Cloud App</a> 後，便能接收加強的記錄及視覺化指標。"
+
+#: views/tab-settings.php:186
+msgid "Setup Code"
+msgstr "設定代碼"
+
+#: views/admin-dashboard-widgets.php:29 views/tab-dashboard.php:31
+msgid "%d failed login attempt "
+msgid_plural "%d failed login attempts "
+msgstr[0] "%d 次登入嘗試失敗 - "
+
+#: core/LimitLoginAttempts.php:2046
+msgid "Don't show this message again"
+msgstr "請不要再次顯示這個訊息"
+
+#: core/LimitLoginAttempts.php:2045
+msgid "Remind me a month from now"
+msgstr "一個月後再提醒"
+
+#: core/LimitLoginAttempts.php:2044
+msgid "Yes, turn on email notifications"
+msgstr "是，開啟電子郵件通知"
+
+#: core/LimitLoginAttempts.php:2039
+msgid "You have been upgraded to the latest version of <strong>Limit Login Attempts Reloaded</strong>.<br> Due to increased security threats around the holidays, we recommend turning on email notifications when you receive a failed login attempt."
+msgstr "這個網站已升級至最新版的 <strong>Limit Login Attempts Reloaded</strong>。<br>隨著假期的到來，安全性威脅與日俱增，我們建議開啟接收登入失敗嘗試的電子郵件通知。"
+
+#: views/tab-premium.php:157
+msgid "Premium Support"
+msgstr "付費方案技術支援"
+
+#: views/options-page.php:58
+msgid "Failover"
+msgstr "容錯移轉"
+
+#: views/options-page.php:46 views/options-page.php:48
+msgid "Logs"
+msgstr "記錄"
+
+#: views/tab-settings.php:223
+msgid "Configuration"
+msgstr "組態"
+
+#: views/tab-settings.php:214
+msgid "Only pay $7.99/m per domain - cancel any time"
+msgstr "每個網域每月僅需美金 7.99 元，可隨時取消付費"
+
+#: views/tab-settings.php:213
+msgid "Run auto backups of access control lists, lockouts and logs"
+msgstr "執行存取控制清單、登入鎖定資料及記錄的自動備份"
+
+#: views/tab-settings.php:212
+msgid "Get premium support"
+msgstr "獲得付費技術支援"
+
+#: views/tab-settings.php:211
+msgid "Sync the allow/deny/pass lists between multiple domains"
+msgstr "在多個網域間同步允許/拒絕/忽略清單"
+
+#: views/tab-settings.php:210
+msgid "Use intelligent IP blocking/unblocking technology"
+msgstr "使用智慧型 IP 位址封鎖/解除封鎖技術"
+
+#: views/tab-settings.php:209
+msgid "Absorb site load caused by attacks"
+msgstr "抵禦由攻擊造成的網站負載"
+
+#: views/tab-settings.php:207
+msgid "Why Use Our Premium Cloud App?"
+msgstr "使用付費方案 Cloud App 的優勢"
+
+#: views/tab-settings.php:202
+msgid "Use the <a href=\"%s\" target=\"_blank\">premium app</a> that we offer or follow the instructions on <a href=\"%s\" target=\"_blank\">how to</a> create your own one."
+msgstr "請使用我們提供的<a href=\"%s\" target=\"_blank\">付費版應用程式</a>，或依照<a href=\"%s\" target=\"_blank\">這份指南</a>建立專屬應用程式。"
+
+#: views/tab-settings.php:193
+msgid "Submit"
+msgstr "儲存"
+
+#: views/tab-settings.php:179
+msgid "Custom App"
+msgstr "自訂應用程式"
+
+#: views/tab-settings.php:140
+msgid "Local App"
+msgstr "伺服器本機應用程式"
+
+#: views/tab-settings.php:136
+msgid "App Settings"
+msgstr "應用程式設定"
+
+#: views/tab-settings.php:130
+msgid "Get advanced protection by <a href=\"#\" class=\"llar-upgrade-to-cloud\">upgrading to our Cloud App.</a>"
+msgstr "網站如需進階保護功能，請<a href=\"#\" class=\"llar-upgrade-to-cloud\">升級至 Cloud App</a>。"
+
+#: views/tab-settings.php:124
+msgid "Local"
+msgstr "伺服器本機"
+
+#: views/tab-settings.php:121
+msgid "Active App"
+msgstr "使用中的應用程式"
+
+#: views/app-widgets/acl-rules.php:34
+msgid "IP Access Rules"
+msgstr "IP 位址存取規則"
+
+#: views/app-widgets/acl-rules.php:7
+msgid "Login Access Rules"
+msgstr "登入存取規則"
+
+#: views/app-widgets/event-log.php:9
+msgid "Event Log"
+msgstr "事件記錄"
+
+#: core/App.php:117
+msgid "The endpoint is not responding. Please contact your app provider to settle that."
+msgstr "端點沒有回應。請聯絡應用程式提供者以解決這個問題。"
+
+#: core/LimitLoginAttempts.php:2540
+msgid "No rules yet."
+msgstr "尚無規則。"
+
+#: views/app-widgets/acl-rules.php:27 views/app-widgets/acl-rules.php:54
+#: views/app-widgets/country-access-rules.php:18
+msgid "Add"
+msgstr "新增"
+
+#: views/app-widgets/acl-rules.php:24 views/app-widgets/acl-rules.php:51
+msgid "Pass"
+msgstr "忽略"
+
+#: views/app-widgets/acl-rules.php:23 views/app-widgets/acl-rules.php:50
+msgid "Allow"
+msgstr "允許"
+
+#: views/app-widgets/acl-rules.php:22 views/app-widgets/acl-rules.php:49
+msgid "Deny"
+msgstr "拒絕"
+
+#: views/app-widgets/acl-rules.php:16 views/app-widgets/acl-rules.php:43
+msgid "Action"
+msgstr "可用操作"
+
+#: core/LimitLoginAttempts.php:2497
+msgid "Meanwhile, the app falls over to the <a href=\"%s\">default functionality</a>."
+msgstr "同時，應用程式會回復到<a href=\"%s\">預設功能</a>。"
+
+#: core/LimitLoginAttempts.php:2481
+msgid "No lockouts yet."
+msgstr "尚無登入鎖定。"
+
+#: views/app-widgets/active-lockouts.php:21
+msgid "Expires in (minutes)"
+msgstr "封鎖期限 (分鐘)"
+
+#: views/app-widgets/active-lockouts.php:20
+msgid "Count"
+msgstr "登入次數"
+
+#: core/LimitLoginAttempts.php:2432
+msgid "No events yet."
+msgstr "尚無事件。"
+
+#: views/app-widgets/event-log.php:32
+msgid "Actions"
+msgstr "可用操作"
+
+#: views/app-widgets/event-log.php:31
+msgid "Lockout Duration"
+msgstr "登入鎖定持續時間"
+
+#: views/app-widgets/event-log.php:30
+msgid "Attempts Left"
+msgstr "嘗試剩餘次數"
+
+#: views/app-widgets/acl-rules.php:14 views/app-widgets/acl-rules.php:19
+#: views/app-widgets/acl-rules.php:41 views/app-widgets/acl-rules.php:46
+#: views/app-widgets/event-log.php:29
+msgid "Pattern"
+msgstr "模式"
+
+#: views/app-widgets/event-log.php:28
+msgid "Reason"
+msgstr "原因"
+
+#: views/app-widgets/acl-rules.php:15 views/app-widgets/acl-rules.php:42
+#: views/app-widgets/event-log.php:27
+msgid "Rule"
+msgstr "規則"
+
+#: views/app-widgets/active-lockouts.php:19 views/app-widgets/event-log.php:26
+msgid "Login"
+msgstr "登入"
+
+#: views/app-widgets/active-lockouts.php:18 views/app-widgets/event-log.php:24
+msgid "IP"
+msgstr "IP 位址"
+
+#: views/app-widgets/event-log.php:23
+msgid "Time"
+msgstr "時間"
+
+#: core/LimitLoginAttempts.php:2220
+msgid "Please specify the Setup Code"
+msgstr "請輸入 [設定代碼]"
+
+#: core/LimitLoginAttempts.php:2206
+msgid "The app has been successfully imported."
+msgstr "應用程式已成功匯入。"
+
+#. Author URI of the plugin
+msgid "https://www.limitloginattempts.com/"
+msgstr "https://www.limitloginattempts.com/"
+
+#: core/LimitLoginAttempts.php:347 views/options-page.php:43
+msgid "Dashboard"
+msgstr "控制台"
+
+#: views/tab-logs-local.php:91 views/tab-settings.php:346
+msgid "Save Settings"
+msgstr "儲存設定"
+
+#: views/tab-settings.php:137
+msgid "The app absorbs the main load caused by brute-force attacks, analyzes login attempts, and blocks unwanted visitors. It provides other service functions as well."
+msgstr "應用程式負責抵禦由暴力密碼破解攻擊造成的主要負載、分析登入嘗試操作及封鎖不受歡迎的訪客，並提供其他服務功能。"
+
+#: views/tab-settings.php:37
+msgid "These settings are independent of the apps (see below)."
+msgstr "這些設定獨立於下方的應用程式。"
+
+#: views/tab-settings.php:36
+msgid "General Settings"
+msgstr "一般設定"
+
+#: core/LimitLoginAttempts.php:1788 core/LimitLoginAttempts.php:1861
+msgid "Settings saved."
+msgstr "設定已儲存。"
+
+#: core/LimitLoginAttempts.php:1958
+msgid "Leave a review"
+msgstr "撰寫評論"
+
+#: core/LimitLoginAttempts.php:1957
+msgid "Maybe later"
+msgstr "稍後再說"
+
+#: core/LimitLoginAttempts.php:1956
+msgid "Don't show again"
+msgstr "不再顯示這項訊息"
+
+#: core/LimitLoginAttempts.php:1953
+msgid "We would really like to hear your feedback about the plugin! Please take a couple minutes to write a few words <a href=\"https://wordpress.org/support/plugin/limit-login-attempts-reloaded/reviews/#new-post\" target=\"_blank\">here</a>. Thank you!"
+msgstr "我們非常願意傾聽使用者的外掛使用意見回覆，請前往<a href=\"https://wordpress.org/support/plugin/limit-login-attempts-reloaded/reviews/#new-post\" target=\"_blank\">外掛評論頁面</a>用些許時間撰寫意見，感謝。"
+
+#: core/LimitLoginAttempts.php:1952
+msgid "A <strong>crazy idea</strong> we wanted to share! What if we put an image from YOU on the <a href=\"https://wordpress.org/plugins/limit-login-attempts-reloaded/\" target=\"_blank\">LLAR page</a>?! (<a href=\"https://wordpress.org/plugins/hello-dolly/\" target=\"_blank\">example</a>) A drawing made by you or your child would cheer people up! Send us your drawing by <a href=\"mailto:wpchef.me@gmail.com\" target=\"_blank\">email</a> and we like it, we'll add it in the next release. Let's have some fun!"
+msgstr "開發團隊在此分享一個<strong>大膽的想法</strong>！我們想將你或你的子女的畫作放在<a href=\"https://tw.wordpress.org/plugins/limit-login-attempts-reloaded/\" target=\"_blank\">這個外掛</a>的說明頁面 (<a href=\"https://tw.wordpress.org/plugins/hello-dolly/\" target=\"_blank\">範例</a>)，藉以振奮人心！請將畫作以電子郵件寄送至<a href=\"mailto:wpchef.me@gmail.com\" target=\"_blank\">這個電子郵件地址</a>，如果錄取的話，我們會在下一個發佈版本中使用。大家一起參加活動吧。"
+
+#: core/LimitLoginAttempts.php:1951
+msgid "Hey <strong>Limit Login Attempts Reloaded</strong> user!"
+msgstr "你好，<strong>Limit Login Attempts Reloaded</strong> 的使用者。"
+
+#: views/tab-debug.php:50
+msgid "Copy the contents of the window and provide to support."
+msgstr "進行技術支援時，請複製上方區域的內容並提供這些資訊。"
+
+#: views/options-page.php:50
+msgid "Debug"
+msgstr "偵錯"
+
+#: core/LimitLoginAttempts.php:348 views/options-page.php:44
+msgid "Settings"
+msgstr "設定"
+
+#: views/tab-debug.php:47
+msgid "Debug info"
+msgstr "偵錯資訊"
+
+#: views/tab-settings.php:172
+msgid "Specify the origins you trust in order of priority, separated by commas. We strongly recommend that you <b>do not</b> use anything other than REMOTE_ADDR since other origins can be easily faked. Examples: HTTP_X_FORWARDED_FOR, HTTP_CF_CONNECTING_IP, HTTP_X_SUCURI_CLIENTIP"
+msgstr "依據優先順序輸入受信任的 IP 位址來源，並以逗號分隔多個來源。由於其他來源可輕易變造，強烈建議<strong>不要</strong>使用 <code>REMOTE_ADDR</code> 之外的來源。可用來源參數: <code>HTTP_X_FORWARDED_FOR</code>、<code>HTTP_CF_CONNECTING_IP</code> 及 <code>HTTP_X_SUCURI_CLIENTIP</code>"
+
+#: views/tab-settings.php:168
+msgid "Trusted IP Origins"
+msgstr "受信任的 IP 地址來源"
+
+#: views/tab-settings.php:91
+msgid "after"
+msgstr "(在"
+
+#: views/tab-settings.php:88
+msgid "Email to"
+msgstr "傳送電子郵件至"
+
+#: core/LimitLoginAttempts.php:1766
+msgid "The \""
+msgstr "The \""
+
+#: core/LimitLoginAttempts.php:1474
+msgid "<strong>ERROR</strong>: Incorrect email address or password."
+msgstr "<strong>錯誤:</strong> 不正確的電子郵件地址或密碼。"
+
+#: views/tab-settings.php:68
+msgid "GDPR compliance"
+msgstr "GDPR 合規性"
+
+#: views/tab-logs-local.php:66 views/tab-logs-local.php:80
+msgid "One IP or IP range (1.2.3.4-5.6.7.8) per line"
+msgstr "每行一個 IP 位址或 IP 位址範圍 (例如 1.2.3.4-5.6.7.8)"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: core/LimitLoginAttempts.php:187 views/options-page.php:40
+msgid "Limit Login Attempts Reloaded"
+msgstr "Limit Login Attempts Reloaded"
+
+#: views/app-widgets/event-log.php:25 views/tab-logs-local.php:123
+msgid "Gateway"
+msgstr "登入方式"
+
+#: views/tab-logs-local.php:122
+msgid "Tried to log in as"
+msgstr "嘗試登入的使用者名稱"
+
+#: views/tab-logs-local.php:121
+msgctxt "Internet address"
+msgid "IP"
+msgstr "IP 位址"
+
+#: views/tab-logs-local.php:120
+msgid "Date"
+msgstr "日期"
+
+#: views/tab-logs-local.php:108
+msgid "Clear Log"
+msgstr "清除登入鎖定記錄"
+
+#: views/tab-logs-local.php:77
+msgid "Blocklist"
+msgstr "封鎖清單"
+
+#: views/tab-logs-local.php:70 views/tab-logs-local.php:84
+msgid "One Username per line"
+msgstr "每行一個使用者名稱"
+
+#: views/tab-settings.php:94
+msgid "lockouts"
+msgstr "次登入鎖定之後便傳送)"
+
+#: views/tab-logs-local.php:103
+msgid "Lockout log"
+msgstr "登入鎖定記錄"
+
+#: views/tab-settings.php:85
+msgid "Notify on lockout"
+msgstr "登入鎖定通知"
+
+#: views/tab-settings.php:163
+msgid "hours until retries are reset"
+msgstr "個小時後自動重設登入嘗試次數"
+
+#: views/tab-settings.php:160
+msgid "hours"
+msgstr "個小時"
+
+#: views/tab-settings.php:157
+msgid "lockouts increase lockout time to"
+msgstr "次登入鎖定發生後，將登入鎖定時間增長至"
+
+#: views/tab-settings.php:153
+msgid "minutes lockout"
+msgstr "分鐘的每次登入鎖定時間"
+
+#: views/tab-settings.php:149
+msgid "allowed retries"
+msgstr "次登入嘗試後予以鎖定"
+
+#: views/tab-settings.php:144
+msgid "Lockout"
+msgstr "登入鎖定條件"
+
+#: views/tab-settings.php:46
+msgid "Use global settings"
+msgstr "使用全域設定"
+
+#: views/tab-settings.php:44
+msgid "If disabled, the global settings will be forcibly applied to the entire network."
+msgstr "停用這項設定後，整個多站網路中的全部網站便會套用全域設定。"
+
+#: views/tab-settings.php:43
+msgid "Let network sites use their own settings"
+msgstr "讓多站網路中的個別網站使用獨立設定"
+
+#: views/tab-logs-local.php:51
+msgid "%d IP is currently blocked from trying to log in"
+msgstr "目前封鎖了 %d 個嘗試登入的 IP 位址"
+
+#: views/tab-logs-local.php:49
+msgid "Restore Lockouts"
+msgstr "解除登入鎖定"
+
+#: views/tab-logs-local.php:46
+msgid "Active lockouts"
+msgstr "目前鎖定目標"
+
+#: views/tab-logs-local.php:39
+msgid "No lockouts yet"
+msgstr "尚未發生需要進行登入鎖定的狀況"
+
+#: views/tab-logs-local.php:37
+msgid "%d lockout since last reset"
+msgid_plural "%d lockouts since last reset"
+msgstr[0] "從最後一次重設開始計算，發生了 %d 次登入鎖定"
+
+#: views/tab-logs-local.php:35
+msgid "Reset Counter"
+msgstr "重設計數器"
+
+#: views/tab-logs-local.php:31
+msgid "Total lockouts"
+msgstr "登入鎖定次數總計"
+
+#: views/tab-logs-local.php:26
+msgid "Statistics"
+msgstr "統計資料"
+
+#: core/LimitLoginAttempts.php:1732
+msgid "Cleared current lockouts"
+msgstr "清除目前的登入鎖定資料"
+
+#: core/LimitLoginAttempts.php:1725
+msgid "Reset lockout count"
+msgstr "重設登入鎖定計數"
+
+#: core/LimitLoginAttempts.php:1718
+msgid "Cleared IP log"
+msgstr "清除 IP 位址記錄"
+
+#: core/LimitLoginAttempts.php:1491
+msgid "WC Error"
+msgstr "WooCommerce 錯誤"
+
+#: core/LimitLoginAttempts.php:1476
+msgid "<strong>ERROR</strong>: Incorrect username or password."
+msgstr "<strong>錯誤:</strong> 不正確的使用者名稱或密碼。"
+
+#: core/LimitLoginAttempts.php:533 core/LimitLoginAttempts.php:923
+#: core/LimitLoginAttempts.php:1422
+msgid "Please try again in %d minute."
+msgid_plural "Please try again in %d minutes."
+msgstr[0] "請於 %d 分鐘後再試。"
+
+#: core/LimitLoginAttempts.php:531 core/LimitLoginAttempts.php:921
+#: core/LimitLoginAttempts.php:1420
+msgid "Please try again in %d hour."
+msgid_plural "Please try again in %d hours."
+msgstr[0] "請於 %d 小時後再試。"
+
+#: core/LimitLoginAttempts.php:1412
+msgid "Please try again later."
+msgstr "請稍後再試。"
+
+#: core/LimitLoginAttempts.php:524 core/LimitLoginAttempts.php:916
+#: core/LimitLoginAttempts.php:1404
+msgid "<strong>ERROR</strong>: Too many failed login attempts."
+msgstr "<strong>錯誤:</strong> 過多的登入嘗試失敗次數。"
+
+#: core/LimitLoginAttempts.php:1100
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d 分鐘"
+
+#: core/LimitLoginAttempts.php:1094
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 小時"
+
+#: core/LimitLoginAttempts.php:2732
+msgid "<strong>%d</strong> attempt remaining."
+msgid_plural "<strong>%d</strong> attempts remaining."
+msgstr[0] "尚餘 <strong>%d</strong> 次嘗試機會。"

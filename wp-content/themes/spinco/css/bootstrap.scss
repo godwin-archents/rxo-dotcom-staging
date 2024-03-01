@@ -1,0 +1,231 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$primary: $theme-primary;
+$secondary: $theme-secondary;
+$success: $theme-green;
+// $info: $cyan;
+// $warning: $yellow;
+$danger: $theme-red;
+$light: $theme-gray;
+$dark: $theme-gray-dark;
+
+$font-family-base: $font-family;
+$grid-breakpoints: $layout-breakpoints;
+$enable-shadows: false;
+$enable-negative-margins: true;
+
+$grid-gutter-width: 2.5rem;
+
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-hover-color: none;
+
+$input-btn-padding-y: 0.875rem;
+$input-btn-padding-x: 3rem;
+$input-btn-font-family: $font-family-base;
+$input-btn-focus-box-shadow: none;
+
+$input-btn-padding-y-sm: 0.675rem;
+$input-btn-padding-x-sm: 2rem;
+
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2.5rem;
+
+$input-btn-border-width: 0.125rem;
+
+$btn-box-shadow: none;
+$btn-disabled-opacity: 1;
+$btn-active-box-shadow: none;
+
+$btn-border-radius: 5rem;
+$btn-border-radius-sm: 5rem;
+$btn-border-radius-lg: 0.25rem;
+
+$btn-transition: all 0.15s ease-in-out;
+
+$nav-tabs-border-color: $theme-gray;
+$nav-tabs-border-width: 1px;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-hover-border-color: $theme-primary;
+$nav-tabs-link-active-color: $theme-primary;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: $theme-primary;
+
+$modal-backdrop-opacity: 0.8;
+
+$component-active-color: $theme-black;
+
+// Forms
+
+// scss-docs-start form-label-variables
+$form-label-margin-bottom: 0.5rem;
+$form-label-font-size: 1rem;
+$form-label-font-style: normal;
+$form-label-font-weight: 600;
+$form-label-color: var(--#{prefix}black);
+// scss-docs-end form-label-variables
+
+// scss-docs-start form-input-variables
+$input-padding-y: 0.875rem;
+$input-padding-x: 1rem;
+$input-font-family: $font-family-base;
+$input-font-size: 1rem;
+$input-font-weight: 400;
+$input-line-height: 1.5;
+
+$input-bg: $theme-gray;
+$input-disabled-color: $theme-gray-dark;
+$input-disabled-bg: $theme-gray;
+$input-disabled-border-color: $theme-gray-dark;
+
+$input-color: var(--#{prefix}black);
+$input-border-color: $theme-gray;
+$input-border-width: 0.125rem;
+$input-box-shadow: none;
+
+$input-border-radius: 0.25rem;
+$input-border-radius-sm: 0.25rem;
+$input-border-radius-lg: 0.25rem;
+
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $secondary;
+$input-focus-color: $input-color;
+$input-focus-width: 0;
+$input-focus-box-shadow: $input-box-shadow;
+
+$input-placeholder-color: $theme-gray-dark;
+$input-plaintext-color: var(--#{prefix}black);
+$input-height: auto;
+$input-height-sm: auto;
+$input-height-lg: auto;
+// scss-docs-end form-input-variables
+
+// scss-docs-start form-check-variables
+$form-check-input-active-filter: brightness(100%);
+
+$form-check-input-bg: $theme-white;
+$form-check-input-border: 1px solid $theme-black;
+$form-check-input-focus-border: $form-check-input-bg;
+// scss-docs-end form-check-variables
+
+// scss-docs-start form-select-variables
+$form-select-bg-position: right 0.75rem center;
+$form-select-bg-size: 16px 12px;
+$form-select-indicator: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.034 0.30374C1.5687 -0.101248 0.814285 -0.101248 0.34898 0.30374C-0.116327 0.708728 -0.116327 1.36534 0.34898 1.77033L7.15749 7.69626C7.6228 8.10125 8.3772 8.10125 8.84251 7.69626L15.651 1.77033C16.1163 1.36534 16.1163 0.708729 15.651 0.303741C15.1857 -0.101247 14.4313 -0.101247 13.966 0.303741L7.99674 5.49921L2.034 0.30374Z' fill='black'/%3E%3C/svg%3E");
+// scss-docs-end form-select-variables
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../../node_modules/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"white": $white,
+	"red": #f10013,
+	"tertiary": $theme-tertiary,
+	"text-light": $theme-text-light,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$spacers: map-merge(
+	$spacers,
+	(
+		0: 0,
+		1: $spacer * 0.25,
+		2: $spacer * 0.5,
+		3: $spacer,
+		4: $spacer * 1.5,
+		5: $spacer * 2,
+		6: $spacer * 3,
+		7: $spacer * 4,
+		8: $spacer * 5,
+		9: $spacer * 6,
+		10: $spacer * 7,
+		11: $spacer * 8,
+		12: $spacer * 9,
+		13: $spacer * 10,
+	)
+);
+
+// 5. Include remainder of required parts
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+// Layout & components
+@import "../../../../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+	$utilities,
+	(
+		"font-weight":
+			map-merge(
+				map-get($utilities, "font-weight"),
+				(
+					values:
+						map-merge(
+							map-get(map-get($utilities, "font-weight"), "values"),
+							(
+								100: 100,
+								200: 200,
+								300: 300,
+								400: 400,
+								500: 500,
+								600: 600,
+								700: 700,
+								800: 800,
+								900: 900,
+							)
+						),
+				)
+			),
+		"width":
+			map-merge(
+				map-get($utilities, "width"),
+				(
+					responsive: true,
+				)
+			),
+	)
+);
+
+@import "../../../../node_modules/bootstrap/scss/reboot";
+@import "../../../../node_modules/bootstrap/scss/type";
+@import "../../../../node_modules/bootstrap/scss/images";
+@import "../../../../node_modules/bootstrap/scss/containers";
+@import "../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../node_modules/bootstrap/scss/helpers";
+
+@import "../../../../node_modules/bootstrap/scss/tables";
+@import "../../../../node_modules/bootstrap/scss/forms";
+@import "../../../../node_modules/bootstrap/scss/buttons";
+@import "../../../../node_modules/bootstrap/scss/transitions";
+@import "../../../../node_modules/bootstrap/scss/dropdown";
+@import "../../../../node_modules/bootstrap/scss/button-group";
+@import "../../../../node_modules/bootstrap/scss/nav";
+@import "../../../../node_modules/bootstrap/scss/navbar";
+@import "../../../../node_modules/bootstrap/scss/card";
+// @import "../../../../node_modules/bootstrap/scss/accordion";
+// @import "../../../../node_modules/bootstrap/scss/breadcrumb";
+// @import "../../../../node_modules/bootstrap/scss/pagination";
+// @import "../../../../node_modules/bootstrap/scss/badge";
+// @import "../../../../node_modules/bootstrap/scss/alert";
+// @import "../../../../node_modules/bootstrap/scss/progress";
+// @import "../../../../node_modules/bootstrap/scss/list-group";
+// @import "../../../../node_modules/bootstrap/scss/close";
+// @import "../../../../node_modules/bootstrap/scss/toasts";
+@import "../../../../node_modules/bootstrap/scss/modal";
+// @import "../../../../node_modules/bootstrap/scss/tooltip";
+// @import "../../../../node_modules/bootstrap/scss/popover";
+// @import "../../../../node_modules/bootstrap/scss/carousel";
+// @import "../../../../node_modules/bootstrap/scss/spinners";
+// @import "../../../../node_modules/bootstrap/scss/offcanvas";
+// @import "../../../../node_modules/bootstrap/scss/placeholders";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../../../node_modules/bootstrap/scss/utilities/api";

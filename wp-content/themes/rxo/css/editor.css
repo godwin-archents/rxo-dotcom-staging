@@ -1,0 +1,52 @@
+body {
+	padding-top: 0 !important;
+	padding-right: calc(var(--rxo-gutter-x) * 0.5);
+	padding-left: calc(var(--rxo-gutter-x) * 0.5);
+}
+
+.wp-block {
+	max-width: none !important;
+}
+
+:where(.wp-block) {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.edit-post-visual-editor__post-title-wrapper {
+	width: 1440px;
+	margin: 3rem auto;
+}
+
+.is-root-container {
+	max-width: 1440px !important;
+	border: 0.125rem solid var(--rxo-primary-dark);
+	border-radius: 0.125rem;
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+	margin: auto;
+}
+
+.acf-field.acf-field-true-false {
+	display: inline-block;
+}
+
+body .rxo-block-button {
+	border: none;
+	background: transparent;
+}
+
+.d-none {
+	display: block !important;
+	opacity: 0.2;
+}
+
+.wpforms-field {
+	clear: both;
+}
+
+/* Disable the data-image in form container block when loading wpforms */ 
+.wpforms-pix-trigger {
+	display: none;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */

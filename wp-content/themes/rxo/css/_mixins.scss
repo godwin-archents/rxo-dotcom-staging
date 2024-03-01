@@ -1,0 +1,94 @@
+@mixin color($color) {
+	color: $color;
+	fill: $color;
+	stroke: $color;
+}
+
+@mixin transition($set) {
+	-webkit-transition: $set;
+	-moz-transition: $set;
+	transition: $set;
+}
+
+@mixin transform($set) {
+	-webkit-transform: $set;
+	-moz-transform: $set;
+	transform: $set;
+}
+
+@mixin animation($set) {
+	-webkit-animation: $set;
+	-moz-animation: $set;
+	animation: $set;
+}
+
+@mixin property($args...) {
+	@debug keywords($args);
+
+	@each $name, $value in keywords($args) {
+		-webkit-#{$name}: $value;
+		-moz-#{$name}: $value;
+		#{$name}: $value;
+	}
+}
+
+@mixin anim($args...) {
+	@debug keywords($args);
+	@each $name, $value in keywords($args) {
+		-webkit-animation-#{$name}: $value;
+		-moz-animation-#{$name}: $value;
+		animation-#{$name}: $value;
+	}
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin theme-scrollbar() {
+	&::-webkit-scrollbar {
+		width: 20px;
+		width: 10px;
+		background-color: #f0f0f0;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #f0f0f0;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #8e8e8e;
+		border: 1px solid #f0f0f0;
+		border-radius: 5px;
+	}
+}
+
+/******** Chrome autofill css **********/
+@mixin input-autofill($text-color: var(--#{$prefix}black), $bg-color: var(--#{$prefix}white)) {
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		-webkit-text-fill-color: $text-color !important;
+		box-shadow: 0 0 0 30px $bg-color inset !important;
+		-webkit-box-shadow: 0 0 0 30px $bg-color inset !important;
+	}
+}
+
+@mixin input-autofill-dark() {
+	@include input-autofill(var(--#{$prefix}white), var(--#{$prefix}gray-dark));
+}
+
+@mixin input-autofill-gray() {
+	@include input-autofill(var(--#{$prefix}black), var(--#{$prefix}gray));
+}

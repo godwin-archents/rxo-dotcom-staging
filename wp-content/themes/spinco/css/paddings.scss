@@ -1,0 +1,52 @@
+/* XL Size */
+
+/* Label and Headline */
+.py-12 {
+	padding-top: 8.25rem !important;
+	padding-bottom: 8.25rem !important;
+}
+
+/* Body Copy Below Image */
+.py-11 {
+	padding-top: 7rem !important;
+	padding-bottom: 7rem !important;
+}
+
+/* L Size */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.py-12 {
+		padding-top: 7rem !important;
+		padding-bottom: 7rem !important;
+	}
+
+	.py-11 {
+		padding-top: 5.75rem !important;
+		padding-bottom: 5.75rem !important;
+	}
+}
+
+/* M Size */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.py-12 {
+		padding-top: 7rem !important;
+		padding-bottom: 7rem !important;
+	}
+
+	.py-11 {
+		padding-top: 5.75rem !important;
+		padding-bottom: 5.75rem !important;
+	}
+}
+
+/* S Size */
+@media (max-width: 767px) {
+	.py-12 {
+		padding-top: 3.25rem !important;
+		padding-bottom: 3.25rem !important;
+	}
+
+	.py-11 {
+		padding-top: 3.25rem !important;
+		padding-bottom: 3.25rem !important;
+	}
+}

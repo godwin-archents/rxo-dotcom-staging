@@ -1,0 +1,16 @@
+header {
+	width: 100%;
+	background-color: var(--#{$prefix}white);
+	display: flex;
+	height: var(--header-height);
+
+	nav.navbar {
+		flex: 1;
+	}
+}
+
+img.custom-logo {
+	width: 100%;
+	height: auto;
+	max-width: var(--logo-width);
+}

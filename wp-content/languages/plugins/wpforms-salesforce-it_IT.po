@@ -1,0 +1,193 @@
+# Translation of WPForms - WPForms Salesforce in Italian
+# This file is distributed under the same license as the WPForms - WPForms Salesforce package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-05 09:01:14+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-rc.4\n"
+"Language: it\n"
+"Project-Id-Version: WPForms - WPForms Salesforce\n"
+
+#: wpforms-salesforce/wpforms-salesforce.php:113
+msgid "The WPForms Salesforce plugin has been deactivated, because it requires WPForms v1.7.3 or later to work."
+msgstr "Il plugin WPForms Salesforce è stato disattivato perché per funzionare ha bisogno di WPForms 1.6.2."
+
+#. translators: %s - WPForms.com documentation page URL.
+#: wpforms-salesforce/wpforms-salesforce.php:85
+msgid "The WPForms Salesforce plugin has been deactivated. Your site is running an outdated version of PHP that is no longer supported and is not compatible with the Salesforce plugin. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read more</a> for additional information."
+msgstr "Il plugin WPForms Salesforce è stato disattivato. Il tuo sito usa una versione vecchia di PHP che non è più supportata e che non è compatibile con il plugin Salesforce. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Leggi qui</a> per maggiori informazioni. "
+
+#. translators: %s - URL to the Salesforce documentation page on WPForms.com.
+#: wpforms-salesforce/templates/settings/new-account-form.php:28
+msgid "Click <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to learn how to connect WPForms with Salesforce."
+msgstr "Fai clic <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">qui</a> per sapere come collegare WPForms con Salesforce."
+
+#: wpforms-salesforce/templates/settings/new-account-form.php:17
+msgid "Callback URL:"
+msgstr "URL di callback:"
+
+#: wpforms-salesforce/templates/settings/new-account-form.php:14
+msgid "Consumer Secret"
+msgstr "Chiave segreta del consumatore"
+
+#: wpforms-salesforce/templates/settings/new-account-form.php:13
+msgid "Consumer Key"
+msgstr "Chiave del consumatore"
+
+#: wpforms-salesforce/templates/tmpl/connection.php:38
+msgid "Select Salesforce Object"
+msgstr "Seleziona l'oggetto Salesforce"
+
+#: wpforms-salesforce/templates/tmpl/connection.php:27
+#: wpforms-salesforce/templates/tmpl/connection.php:41
+msgid "--- Select ---"
+msgstr "--- Seleziona ---"
+
+#: wpforms-salesforce/templates/tmpl/connection.php:24
+msgid "Select Account"
+msgstr "Seleziona l'account"
+
+#: wpforms-salesforce/templates/settings/new-account-form.php:42
+#: wpforms-salesforce/templates/tmpl/error.php:8
+msgid "Something went wrong while performing an AJAX request."
+msgstr "Qualcosa è andato storto durante l'esecuzione di una richiesta AJAX."
+
+#: wpforms-salesforce/templates/tmpl/required-fields.php:16
+msgid "--- Select Form Field ---"
+msgstr "--- Seleziona il campo del modulo ---"
+
+#: wpforms-salesforce/src/Provider/Core.php:34
+msgid "Salesforce"
+msgstr "Salesforce"
+
+#: wpforms-salesforce/src/Provider/Api.php:69
+#: wpforms-salesforce/src/Provider/Api.php:84
+msgid "Unexpected account options."
+msgstr "Opzioni di account inaspettate."
+
+#. translators: %s - response error description.
+#: wpforms-salesforce/src/Provider/Auth.php:565
+#: wpforms-salesforce/src/Provider/Auth.php:573
+msgid "Salesforce Integration: data retrieval failed (%s)."
+msgstr "Integrazione Salesforce: il recupero dati è fallito (%s)."
+
+#: wpforms-salesforce/src/Provider/Auth.php:554
+msgid "Salesforce Integration: data retrieval failed (resource owner error)."
+msgstr "Integrazione Salesforce: il recupero dati è fallito (errore del proprietario della risorsa)."
+
+#: wpforms-salesforce/src/Provider/Auth.php:517
+msgid "Salesforce Integration: account connection failed (this account already connected)."
+msgstr "Integrazione Salesforce: la connessione all'account è fallita (questo account è già connesso)."
+
+#: wpforms-salesforce/src/Provider/Auth.php:394
+msgid "Salesforce Integration: account connection failed (authorization code not passed)."
+msgstr "Integrazione Salesforce: la connessione all'account è fallita (codice di autorizzazione non passato)."
+
+#. translators: %s - response error description.
+#: wpforms-salesforce/src/Provider/Auth.php:293
+#: wpforms-salesforce/src/Provider/Auth.php:301
+msgid "Salesforce Integration: account connection update failed (%s)."
+msgstr "Integrazione Salesforce: l'aggiornamento della connessione all'account è fallito (%s)."
+
+#: wpforms-salesforce/src/Provider/Auth.php:283
+msgid "Salesforce Integration: account connection updated successfully."
+msgstr "Integrazione Salesforce: l'aggiornamento della connessione all'account è riuscito."
+
+#: wpforms-salesforce/src/Provider/Auth.php:268
+msgid "Salesforce Integration: account connection update failed (no refresh token found)."
+msgstr "Integrazione Salesforce: l'aggiornamento della connessione all'account è fallito (non abbiamo trovato il token di aggiornamento)."
+
+#: wpforms-salesforce/src/Provider/Auth.php:259
+msgid "Salesforce Integration: account connection update failed (no access token found)."
+msgstr "Integrazione Salesforce: l'aggiornamento della connessione all'account è fallito (non abbiamo trovato il token di accesso)."
+
+#. translators: %s - response error description.
+#: wpforms-salesforce/src/Provider/Auth.php:230
+#: wpforms-salesforce/src/Provider/Auth.php:238
+#: wpforms-salesforce/src/Provider/Auth.php:379
+msgid "Salesforce Integration: account connection failed (%s)."
+msgstr "Integrazione Salesforce: la connessione all'account è fallita (%s)."
+
+#: wpforms-salesforce/src/Provider/Auth.php:220
+msgid "Salesforce Integration: account was connected successfully."
+msgstr "Integrazione Salesforce: la connessione all'account è avvenuta con successo."
+
+#: wpforms-salesforce/src/Provider/Settings/FormBuilder.php:445
+msgid "--- Select Salesforce Field ---"
+msgstr "--- Selezione un campo Salesforce ---"
+
+#: wpforms-salesforce/src/Provider/Settings/FormBuilder.php:254
+msgid "Marketing provider connection"
+msgstr "Connessione con il provider di marketing"
+
+#: wpforms-salesforce/src/Provider/Settings/FormBuilder.php:218
+msgid "New Salesforce Account"
+msgstr " Nuovo account Salesforce"
+
+#: wpforms-salesforce/src/Provider/Settings/PageIntegrations.php:140
+msgid "Please fill out all of the fields below to add your new provider account."
+msgstr "Completa tutti i campi qui sotto per aggiungere l'account del tuo nuovo provider."
+
+#: wpforms-salesforce/src/Provider/Settings/PageIntegrations.php:135
+msgid "Add New Account"
+msgstr "Aggiungi un nuovo account"
+
+#. translators: %s - provider name.
+#: wpforms-salesforce/src/Provider/Settings/PageIntegrations.php:131
+msgid "Connect to %s"
+msgstr "Connetti a %s"
+
+#: wpforms-salesforce/src/Provider/Settings/PageIntegrations.php:98
+msgid "Please provide valid Consumer Key and Consumer Secret."
+msgstr "Fornisci una chiave e un segreto cliente validi."
+
+#: wpforms-salesforce/src/Provider/Connection.php:233
+msgid "Product"
+msgstr "Prodotto"
+
+#: wpforms-salesforce/src/Provider/Connection.php:232
+msgid "Opportunity"
+msgstr "Opportunità"
+
+#: wpforms-salesforce/src/Provider/Connection.php:231
+msgid "Lead"
+msgstr "Lead"
+
+#: wpforms-salesforce/src/Provider/Connection.php:230
+msgid "Contact"
+msgstr "Contatti"
+
+#: wpforms-salesforce/src/Provider/Connection.php:229
+msgid "Case"
+msgstr "Caso"
+
+#: wpforms-salesforce/src/Provider/Connection.php:228
+msgid "Campaign"
+msgstr "Campagna"
+
+#: wpforms-salesforce/src/Provider/Connection.php:227
+msgid "Account"
+msgstr "Account"
+
+#: wpforms-salesforce/src/Provider/Connection.php:35
+msgid "Unexpected connection data."
+msgstr "Dati di connessione inattesi."
+
+#: wpforms-salesforce/src/Provider/Process.php:465
+msgid "Submission to Salesforce failed."
+msgstr "L'invio a Salesforce non è riuscito."
+
+#: wpforms-salesforce/src/Provider/Process.php:203
+msgid "Missing valid values for all required fields."
+msgstr "Mancano valori validi per tutti i campi obbligatori."
+
+#: wpforms-salesforce/src/Provider/Process.php:193
+msgid "Something went wrong while performing API request for retrieving object fields."
+msgstr "Qualcosa è andato storto durante l'esecuzione della richiesta API per il recupero dei campi dell'oggetto."
+
+#: wpforms-salesforce/src/Provider/Process.php:139
+msgid "Form to Salesforce processing stopped by conditional logic."
+msgstr "L'elaborazione del modulo a Salesforce è stata interrotta dalla logica condizionale."

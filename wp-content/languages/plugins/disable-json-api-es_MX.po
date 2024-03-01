@@ -1,0 +1,118 @@
+# Translation of Plugins - Disable REST API - Development (trunk) in Spanish (Mexico)
+# This file is distributed under the same license as the Plugins - Disable REST API - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-03-01 00:08:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: es_MX\n"
+"Project-Id-Version: Plugins - Disable REST API - Development (trunk)\n"
+
+#: classes/disable-rest-api.php:240
+msgid "Allowlist settings saved for this user role."
+msgstr "Los ajustes de la lista de permisos se han guardado para este perfil de usuario."
+
+#: classes/disable-rest-api.php:234
+msgid "All allowlists have been reset for this user role."
+msgstr "Se han restablecido todas las listas de permisos para este perfil de usuario."
+
+#: classes/disable-rest-api.php:216
+msgid "Invalid user role detected when processing form. No updates have been made."
+msgstr "Se ha detectado un perfil de usuario no válido al procesar el formulario. No se han realizado actualizaciones."
+
+#: classes/helpers.php:197
+msgid "Unauthenticated"
+msgstr "Sin identificar"
+
+#: classes/admin.php:88
+msgid "Allow Full REST API Access"
+msgstr "Permitir el acceso completo a la API REST"
+
+#: classes/admin.php:86
+msgid "Manage REST API Access"
+msgstr "Gestionar el acceso a la API REST"
+
+#: classes/admin.php:83
+msgid "If you choose to manage access for a user role, you will have to come back and add permissions for any new routes later."
+msgstr "Si eliges gestionar el acceso para un perfil de usuario, tendrás que volver y añadir permisos para cualquier nueva ruta más tarde."
+
+#: classes/admin.php:81
+msgid "NOTE: New routes may be added in the future by plugins, themes, or WordPress itself."
+msgstr "NOTA: es posible que en el futuro se añadan nuevas rutas mediante plugins, temas o el propio WordPress."
+
+#. translators: name of user role
+#: classes/admin.php:77
+msgid "Manage Rules for %s Users"
+msgstr "Gestionar reglas para usuarios %s"
+
+#: admin.php:43
+msgid "Are you sure you wish to reset all allowed routes for this user role?"
+msgstr "¿Está seguro de que quieres restablecer todas las rutas permitidas para este perfil de usuario?"
+
+#: admin.php:42
+msgid "Reset Allowed List of Routes"
+msgstr "Restablecer la lista de rutas permitidas"
+
+#: admin.php:14
+msgid "Unauthenticated Users"
+msgstr "Usuarios no identificados"
+
+#: admin.php:13
+msgid "Rules for"
+msgstr "Reglas para"
+
+#. Description of the plugin
+msgid "Disable the use of the REST API on your website to anonymous users. You can optionally enable select endpoints if you wish. Now with support for User Roles!"
+msgstr "Desactiva el uso de la API REST en tu web para los usuarios anónimos. Si lo quieres, puedes activar determinados endpoints. ¡Ahora con compatibilidad con perfiles de usuario!"
+
+#. Author URI of the plugin
+msgid "http://www.binarytemplar.com"
+msgstr "http://www.binarytemplar.com"
+
+#. Author of the plugin
+msgid "Dave McHale"
+msgstr "Dave McHale"
+
+#. Plugin URI of the plugin
+msgid "http://www.binarytemplar.com/disable-json-api"
+msgstr "http://www.binarytemplar.com/disable-json-api"
+
+#: classes/disable-rest-api.php:276
+msgid "DRA: Only authenticated users can access the REST API."
+msgstr "DRA: solo los usuarios identificados pueden acceder a la API REST."
+
+#: classes/disable-rest-api.php:165
+msgid "Settings"
+msgstr "Ajustes"
+
+#: classes/disable-rest-api.php:143
+msgid "Disable REST API Settings"
+msgstr "Desactivar los ajustes de la API REST"
+
+#: classes/admin.php:31
+msgid "On this website, the REST API root is %s"
+msgstr "En esta web, la raíz de la API REST es %s"
+
+#: classes/admin.php:27
+msgid "REST API ROOT"
+msgstr "RAÍZ DE LA API REST"
+
+#: admin.php:7
+msgid "Checking a box merely restores default functionality to an endpoint. Other authentication and/or permissions may still be required for access, or other themes/plugins may also affect access to those endpoints."
+msgstr "Marcar una casilla solo restablece la funcionalidad por defecto de un endpoint. Es posible que aún se necesita otra identificación o permisos para acceder, o que otros temas o plugins también afecten al acceso a esos endpoints."
+
+#: admin.php:7
+msgid "IMPORTANT NOTE:"
+msgstr "NOTA IMPORTANTE:"
+
+#: admin.php:5
+msgid "By default, this plugin ensures that the entire REST API is protected from non-authenticated users. You may use this page to specify which endpoints should be allowed to behave as normal."
+msgstr "Por defecto, este plugin asegura que toda la API REST está protegida de los usuarios no identificados. Puedes usar esta página para especificar qué endpoints deben comportarse normalmente."
+
+#. Plugin Name of the plugin
+#: admin.php:2 classes/disable-rest-api.php:144
+msgid "Disable REST API"
+msgstr "Disable REST API"

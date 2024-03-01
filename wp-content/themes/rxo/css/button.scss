@@ -1,0 +1,307 @@
+/******** Bootstrap override css **********/
+.btn {
+	--#{$prefix}btn-focus-box-shadow: none;
+
+	--#{$prefix}btn-icon-width: 1rem;
+
+	--#{$prefix}btn-font-weight: 500;
+	--#{$prefix}btn-outline-color: var(--#{$prefix}white);
+	--#{$prefix}btn-outline-width: var(--#{$prefix}btn-border-width);
+
+	position: relative;
+
+	.btn-check:focus + &,
+	.btn-check:focus-within + &,
+	.btn-check:focus-visible + &,
+	&:focus,
+	&:focus-within,
+	&:focus-visible,
+	.btn-check:checked + &,
+	:not(.btn-check) + &:active,
+	&.active,
+	&:active,
+	&.show {
+		color: var(--#{$prefix}btn-active-color);
+		background-color: var(--#{$prefix}btn-active-bg);
+		border-color: var(--#{$prefix}btn-active-border-color);
+	}
+
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		&::before {
+			content: "";
+			width: auto;
+			height: auto;
+			position: absolute;
+			margin: auto;
+			border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-outline-color);
+			top: var(--#{$prefix}btn-outline-width);
+			bottom: var(--#{$prefix}btn-outline-width);
+			left: var(--#{$prefix}btn-outline-width);
+			right: var(--#{$prefix}btn-outline-width);
+			border-radius: var(--#{$prefix}btn-border-radius);
+		}
+	}
+
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		--#{$prefix}btn-disabled-color: var(--#{$prefix}gray-500);
+		--#{$prefix}btn-disabled-bg: var(--#{$prefix}light);
+		--#{$prefix}btn-disabled-border-color: var(--#{$prefix}light);
+		color: var(--#{$prefix}btn-disabled-color);
+		background-color: var(--#{$prefix}btn-disabled-bg);
+		border-color: var(--#{$prefix}btn-disabled-border-color);
+	}
+
+	@include media-breakpoint-down(md) {
+		& {
+			--#{$prefix}btn-padding-x: 1rem;
+			width: 100%;
+		}
+	}
+}
+
+.btn-sm {
+	--#{$prefix}btn-border-width: 0.0625rem;
+}
+
+.btn-lg {
+	--#{$prefix}btn-icon-width: 2rem;
+	font-size: 1.5rem;
+	line-height: 1.4;
+	text-align: left;
+	max-width: 100%;
+
+	&.btn-icon {
+		position: relative;
+		padding-right: calc(var(--#{$prefix}btn-padding-x) + var(--#{$prefix}icon-width) + 0.5rem);
+		&::after {
+			position: absolute;
+			right: var(--#{$prefix}btn-padding-x);
+			top: auto;
+			bottom: auto;
+			left: auto;
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		& {
+			--#{$prefix}btn-icon-width: 1.5rem;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.btn-link {
+	--#{$prefix}btn-color: inherit;
+	--#{$prefix}btn-bg: transparent;
+	--#{$prefix}btn-border-color: var(--#{$prefix}btn-color);
+
+	--#{$prefix}btn-hover-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-hover-bg: var(--#{$prefix}btn-bg);
+	--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-bg);
+
+	--#{$prefix}btn-active-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-active-bg: var(--#{$prefix}btn-bg);
+	--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-bg);
+
+	--#{$prefix}btn-border-width: 0.125rem;
+	--#{$prefix}btn-padding-x: 0;
+	--#{$prefix}btn-padding-y: 0.25rem;
+	--#{$prefix}btn-border-radius: 0;
+
+	border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+	border-width: 0 0 var(--#{$prefix}btn-border-width) 0;
+	border-radius: var(--#{$prefix}btn-border-radius);
+	padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+	background: transparent !important;
+
+	&:hover {
+		border-color: var(--#{$prefix}btn-hover-border-color);
+	}
+
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		border-color: transparent !important;
+
+		&::before {
+			--#{$prefix}btn-border-width: 0.125rem;
+			--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-color);
+			--#{$prefix}btn-outline-color: var(--#{$prefix}btn-active-color);
+			border-style: dashed;
+			top: calc(-1 * var(--#{$prefix}btn-outline-width));
+			bottom: calc(-1 * var(--#{$prefix}btn-outline-width));
+			left: calc(-1 * (var(--#{$prefix}btn-outline-width) + 0.5rem));
+			right: calc(-1 * (var(--#{$prefix}btn-outline-width) + 0.5rem));
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		& {
+			--#{$prefix}btn-padding-x: 0;
+			width: auto;
+			white-space: nowrap;
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+}
+
+.btn-primary {
+	--#{$prefix}btn-color: var(--#{$prefix}black);
+	--#{$prefix}btn-bg: var(--#{$prefix}primary);
+	--#{$prefix}btn-border-color: var(--#{$prefix}btn-bg);
+
+	--#{$prefix}btn-hover-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-hover-bg: var(--#{$prefix}primary-light);
+	--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-bg);
+
+	--#{$prefix}btn-active-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-active-bg: var(--#{$prefix}primary);
+	--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-bg);
+
+	&.btn-link {
+		--#{$prefix}btn-hover-color: var(--#{$prefix}gray-700);
+		--#{$prefix}btn-border-color: var(--#{$prefix}btn-color);
+		--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-color);
+		--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-color);
+	}
+}
+
+.btn-secondary {
+	--#{$prefix}btn-color: var(--#{$prefix}white);
+	--#{$prefix}btn-bg: var(--#{$prefix}secondary);
+	--#{$prefix}btn-border-color: var(--#{$prefix}btn-bg);
+
+	--#{$prefix}btn-hover-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-hover-bg: var(--#{$prefix}dark);
+	--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-bg);
+
+	--#{$prefix}btn-active-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-active-bg: var(--#{$prefix}secondary);
+	--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-bg);
+
+	&.btn-link {
+		--#{$prefix}btn-hover-color: var(--#{$prefix}gray-200);
+		--#{$prefix}btn-border-color: var(--#{$prefix}btn-color);
+		--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-color);
+		--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-color);
+	}
+}
+
+.btn-white {
+	--#{$prefix}btn-color: var(--#{$prefix}black);
+	--#{$prefix}btn-bg: var(--#{$prefix}white);
+	--#{$prefix}btn-border-color: var(--#{$prefix}btn-bg);
+
+	--#{$prefix}btn-hover-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-hover-bg: var(--#{$prefix}white);
+	--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-bg);
+
+	--#{$prefix}btn-active-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-active-bg: var(--#{$prefix}white);
+	--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-bg);
+
+	&.btn-link {
+		--#{$prefix}btn-hover-color: var(--#{$prefix}gray-700);
+		--#{$prefix}btn-border-color: var(--#{$prefix}btn-color);
+		--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-color);
+		--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-color);
+	}
+}
+
+.btn-primary-dark {
+	--#{$prefix}btn-color: var(--#{$prefix}white);
+	--#{$prefix}btn-bg: var(--#{$prefix}primary-dark);
+	--#{$prefix}btn-border-color: var(--#{$prefix}btn-bg);
+
+	--#{$prefix}btn-hover-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-hover-bg: var(--#{$prefix}primary-light);
+	--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-bg);
+
+	--#{$prefix}btn-active-color: var(--#{$prefix}btn-color);
+	--#{$prefix}btn-active-bg: var(--#{$prefix}primary-dark);
+	--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-bg);
+
+	&.btn-link {
+		--#{$prefix}btn-hover-color: var(--#{$prefix}gray-700);
+		--#{$prefix}btn-border-color: var(--#{$prefix}btn-color);
+		--#{$prefix}btn-hover-border-color: var(--#{$prefix}btn-hover-color);
+		--#{$prefix}btn-active-border-color: var(--#{$prefix}btn-active-color);
+	}
+}
+
+.btn-primary-dark,
+.btn-outline-secondary,
+.btn-outline-primary {
+	&:disabled,
+	&.disabled,
+	fieldset:disabled & {
+		--#{$prefix}btn-disabled-bg: transparent;
+	}
+}
+
+.btn-icon {
+	--#{$prefix}icon-color: var(--#{$prefix}btn-color);
+	--#{$prefix}icon-width: var(--#{$prefix}btn-icon-width);
+
+	&::after {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		width: var(--#{$prefix}icon-width);
+		height: var(--#{$prefix}icon-width);
+		margin: 0 0 0 0.5rem;
+		transition: all 0.15s ease-in-out;
+		background: var(--#{$prefix}icon-color);
+		mask-image: var(--icon-uri);
+		-webkit-mask-image: var(--icon-uri);
+	}
+
+	&:hover {
+		--#{$prefix}icon-color: var(--#{$prefix}btn-hover-color);
+	}
+
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		--#{$prefix}icon-color: var(--#{$prefix}btn-active-color);
+	}
+}
+
+.btn-rounded {
+	--#{$prefix}btn-padding-x: 0;
+	--#{$prefix}btn-padding-y: 0;
+	--#{$prefix}btn-border-radius: 50%;
+	--#{$prefix}btn-border-width: 0;
+
+	width: 1.5rem;
+	height: 1.5rem;
+
+	&::before {
+		display: none;
+	}
+
+	&::after {
+		margin: auto;
+	}
+}
+
+.text-bg-danger-required {
+	color: #fff !important;
+	background-color: RGBA(213, 0, 0, 1) !important;
+}
+
+/******** responsive css **********/
+// @media (prefers-reduced-motion: reduce) {
+// 	.btn {
+// 		transition: none;
+// 	}
+// }

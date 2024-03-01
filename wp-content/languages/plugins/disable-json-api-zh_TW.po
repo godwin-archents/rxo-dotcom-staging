@@ -1,0 +1,118 @@
+# Translation of Plugins - Disable REST API - Development (trunk) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - Disable REST API - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-11-28 20:19:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - Disable REST API - Development (trunk)\n"
+
+#: classes/disable-rest-api.php:240
+msgid "Allowlist settings saved for this user role."
+msgstr "這個使用者角色的允許清單已儲存。"
+
+#: classes/disable-rest-api.php:234
+msgid "All allowlists have been reset for this user role."
+msgstr "這個使用者角色的全部允許清單已重設。"
+
+#: classes/disable-rest-api.php:216
+msgid "Invalid user role detected when processing form. No updates have been made."
+msgstr "處理表單時偵測到無效的使用者角色。尚未進行任何變更。"
+
+#: classes/helpers.php:197
+msgid "Unauthenticated"
+msgstr "未驗證的使用者"
+
+#: classes/admin.php:88
+msgid "Allow Full REST API Access"
+msgstr "開放完整 REST API 存取"
+
+#: classes/admin.php:86
+msgid "Manage REST API Access"
+msgstr "管理 REST API 存取"
+
+#: classes/admin.php:83
+msgid "If you choose to manage access for a user role, you will have to come back and add permissions for any new routes later."
+msgstr "如果網站管理員選取以使用者角色管理個別存取權限，則將來必須返回這個頁面，為任何新的路徑新增權限。"
+
+#: classes/admin.php:81
+msgid "NOTE: New routes may be added in the future by plugins, themes, or WordPress itself."
+msgstr "請注意，無論是外掛、佈景主題或 WordPress 核心程式本身，都可能在將來新增新的路徑。"
+
+#. translators: name of user role
+#: classes/admin.php:77
+msgid "Manage Rules for %s Users"
+msgstr "[%s] 的使用者管理規則"
+
+#: admin.php:43
+msgid "Are you sure you wish to reset all allowed routes for this user role?"
+msgstr "確定要重設這個使用者角色的全部允許路徑？"
+
+#: admin.php:42
+msgid "Reset Allowed List of Routes"
+msgstr "重設路徑開放清單"
+
+#: admin.php:14
+msgid "Unauthenticated Users"
+msgstr "未驗證的使用者"
+
+#: admin.php:13
+msgid "Rules for"
+msgstr "規則管理對象"
+
+#. Description of the plugin
+msgid "Disable the use of the REST API on your website to anonymous users. You can optionally enable select endpoints if you wish. Now with support for User Roles!"
+msgstr "禁止匿名使用者存取網站上的 REST API。如有需要，網站管理員可以選擇性啟用選取的端點。這個外掛可以透過使用者角色控制存取權限。"
+
+#. Author URI of the plugin
+msgid "http://www.binarytemplar.com"
+msgstr "https://www.binarytemplar.com/"
+
+#. Author of the plugin
+msgid "Dave McHale"
+msgstr "Dave McHale"
+
+#. Plugin URI of the plugin
+msgid "http://www.binarytemplar.com/disable-json-api"
+msgstr "https://www.binarytemplar.com/plugins/disable-json-api/"
+
+#: classes/disable-rest-api.php:276
+msgid "DRA: Only authenticated users can access the REST API."
+msgstr "Disable REST API: 僅有已驗證的使用者能存取 REST API。"
+
+#: classes/disable-rest-api.php:165
+msgid "Settings"
+msgstr "設定"
+
+#: classes/disable-rest-api.php:143
+msgid "Disable REST API Settings"
+msgstr "Disable REST API 設定"
+
+#: classes/admin.php:31
+msgid "On this website, the REST API root is %s"
+msgstr "這個網站的 REST API 起始端點為 %s。"
+
+#: classes/admin.php:27
+msgid "REST API ROOT"
+msgstr "REST API 起始端點"
+
+#: admin.php:7
+msgid "Checking a box merely restores default functionality to an endpoint. Other authentication and/or permissions may still be required for access, or other themes/plugins may also affect access to those endpoints."
+msgstr "啟用個別路徑只會還原這個端點的預設功能。存取端點仍須通過相關驗證或權限，其他佈景主題/外掛也可能會影響這些端點的存取。"
+
+#: admin.php:7
+msgid "IMPORTANT NOTE:"
+msgstr "重要提示:"
+
+#: admin.php:5
+msgid "By default, this plugin ensures that the entire REST API is protected from non-authenticated users. You may use this page to specify which endpoints should be allowed to behave as normal."
+msgstr "依照預設，這個外掛會以確保整個 REST API 不受未驗證的使用者存取的方式進行保護。網站管理員可以使用這個頁面允許指定端點正常執行。"
+
+#. Plugin Name of the plugin
+#: admin.php:2 classes/disable-rest-api.php:144
+msgid "Disable REST API"
+msgstr "Disable REST API"

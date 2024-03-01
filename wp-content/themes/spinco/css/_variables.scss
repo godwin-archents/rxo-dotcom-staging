@@ -1,0 +1,21 @@
+/****************** Bootstrap Variables ******************/
+$theme-primary: #00f49c;
+$theme-secondary: #00a86b;
+$theme-tertiary: #87ffd4;
+$theme-text: #000;
+$theme-text-light: #616161;
+$theme-gray: #f2f2f2;
+$theme-gray-dark: #404040;
+$theme-green: #00a86b;
+$theme-red: #d50000;
+$theme-white: #ffffff;
+$theme-black: #000000;
+$font-family: "Poppins", sans-serif;
+$layout-breakpoints: (
+	xs: 0,
+	sm: 360px,
+	md: 600px,
+	lg: 800px,
+	xl: 1300px,
+	xxl: 1440px,
+);

@@ -1,0 +1,1116 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "A guide to RXO's Carrier REST APIs",
+    "description": "\n# Introduction \nWelcome to RXO's open API explorer! Here, you have the ability to discover the possibilities that RXO has to offer through our suite of open APIs\n\nOur APIs are built on modern REST principles, and will enable you to drive success for your organization. You can now directly integrate information from RXO's transportation ecosystem to your own applications. RXO loads can now be made available to your loadboard through our APIs so your organization can have a seemless booking experience.  \n- **Key features are:** \n * On-demand access to RXO Loadboard \n * Ability to search RXO loads via your own load board seamlessly\n * Ability to get frequent updates to the load board  \n * Ability to search profitable loads and hot deals\n * Ability to buy preferred loads instantly \n * Ability to receive and e-sign digital rate confirmations.\n\n In this page, you'll find the information regarding all of our available APIs, their operations, along with complete details on parameters, requests and response formats.\n\nAre you looking for an API capability that we don't yet offer? Please reach out to us at apionboarding@rxo.com and let us know what you're looking for. We are continuously working to offer new integration capabilities for our customers and partners. Our enginnering experts will partner with your teams throughout the journey so together we help your business scale."
+  },
+  "servers": [
+    {
+      "url": "https://api-uat-rxoconnect.rxo.com",
+      "description": "**Test Environment** \n\nMessage Limit- 100 KB, Rate Limit - 1 call per second, Quota Limit - 2500 calls per day."
+    },
+    {
+      "url": "https://api-rxoconnect.rxo.com",
+      "description": "**Production Environment** \n\nMessage Limit- 100 KB, Rate Limit - 5 calls per second, Quota Limit - Unlimited."
+    }
+  ],
+  "security": [
+    {
+      "OAuth": []
+    },
+    {
+      "api_key": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Authentication",
+      "description": "RXO Logistics uses OAuth 2.0 token mechanism to securely access API endpoints using client credentials grant type. \n\nUser must get Client Id, Client Secret, Scope and API Key prior to generate bearer token either by requesting to apionboarding@rxo.com.\n\nThe diagram below illustrates the supported authorization flow.\n\n<img src=\"https://static-content-dev.rxo.com/Authentication%20Diagram%202.PNG\" alt=\"Authorization Flow Diagram\">"
+    },
+    {
+      "name": "Loads",
+      "description": "Loadboard APIs provide a seemless ability to search loads available on RXO's loadboard . Once you find a preferred load, you can book it , without leaving your own website."
+    }
+  ],
+  "paths": {
+    "/oAuthAPI/rest/v1/token": {
+      "post": {
+        "description": "Generate token allows you to generate a bearer token. In order to generate the token, you will need to provide an API key in the request header parameter as well as Client ID, Client Secret, Scope and Grant Type in the payload.\n\n Once the token is generated, you will be able to use that token to access any of RXO's open API endpoints. The generated token will expire in 2 hours. Once expired, you will need to refresh the token in order to continue to access the API.",
+        "operationId": "Generate Token",
+        "security": [
+          {
+            "api_key": []
+          }
+        ],
+        "tags": [
+          "Authentication"
+        ],
+        "parameters": [
+          {
+            "required": true,
+            "in": "header",
+            "description": "Api Key as provided by RXO.",
+            "name": "x-api-key",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "[JSON]Generate Token Request.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/tokenrequest"
+              }
+            }
+          }
+        },
+        "x-code-samples": [
+          {
+            "lang": "Curl",
+            "source": "curl --location --request POST 'https://api-uat-rxoconnect.rxo.com/oAuthAPI/rest/v1/token/' \\\n\n--header 'x-api-key: XXXXXXXXXXXXXXXX' \\\n\n--header 'Content-Type: application/json' \\\n\n--data-raw '{\n\n\"client_id\": \"xpo-tran-boomi-test-app\",\n\n\"client_secret\": \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\n\n\"scope\": \"xpo-rates-api\",\n\n\"grant_type\": \"client_credentials\"\n\n}'"
+          },
+          {
+            "lang": "Java",
+            "source": "OkHttpClient client = new OkHttpClient().newBuilder()\n\n  .build();\n\nMediaType mediaType = MediaType.parse(\"application/json\");\n\nRequestBody body = RequestBody.create(mediaType, \"{\\r\\n\\\"client_id\\\": \\\"xpo-tran-boomi-test-app\\\",\\r\\n\\\"client_secret\\\": \\\"XXXXXXXXXXXXXXXXXXXXXXX\\\",\\r\\n\\\"scope\\\": \\\"xpo-rates-api\\\",\\r\\n\\\"grant_type\\\": \\\"client_credentials\\\"\\r\\n}\");\n\nRequest request = new Request.Builder()\n\n  .url(\"https://api-uat-rxoconnect.rxo.com/oAuthAPI/rest/v1/token/\")\n\n  .method(\"POST\", body)\n\n  .addHeader(\"x-api-key\", \"XXXXXXXXXXXXXXXXXX\")\n\n  .addHeader(\"Content-Type\", \"application/json\")\n\n  .build();\n\nResponse response = client.newCall(request).execute();"
+          },
+          {
+            "lang": "NodeJS",
+            "source": "var request = require('request');\n\nvar options = {\n\n  'method': 'POST',\n\n  'url': 'https://api-uat-rxoconnect.rxo.com/oAuthAPI/rest/v1/token/',\n\n  'headers': {\n\n    'x-api-key': 'XXXXXXXXXXXXXXXXXXXXXX',\n\n    'Content-Type': 'application/json'\n\n  },\n\n  body: JSON.stringify({\"client_id\":\"xpo-tran-boomi-test-app\",\"client_secret\":\"XXXXXXXXXXXXXXXXXXXX\",\"scope\":\"xpo-rates-api\",\"grant_type\":\"client_credentials\"})\n\n\n\n};\n\nrequest(options, function (error, response) { \n\n  if (error) throw new Error(error);\n\n  console.log(response.body);\n\n});\n\n"
+          },
+          {
+            "lang": "C#(RestSharp)",
+            "source": "var client = new RestClient(\"https://api-uat-rxoconnect.rxo.com/oAuthAPI/rest/v1/token/\");\n\nclient.Timeout = -1;\n\nvar request = new RestRequest(Method.POST);\n\nrequest.AddHeader(\"x-api-key\", \"XXXXXXXXXXXXXXXXX\");\n\nrequest.AddHeader(\"Content-Type\", \"application/json\");\n\nrequest.AddParameter(\"application/json\", \"{\\r\\n\\\"client_id\\\": \\\"xpo-tran-boomi-test-app\\\",\\r\\n\\\"client_secret\\\": \\\"XXXXXXXXXXXXXXXXXXXXXX\\\",\\r\\n\\\"scope\\\": \\\"xpo-rates-api\\\",\\r\\n\\\"grant_type\\\": \\\"client_credentials\\\"\\r\\n}\",  ParameterType.RequestBody);\n\nIRestResponse response = client.Execute(request);\n\nConsole.WriteLine(response.Content);"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/successtoken"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error400"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error 404 Unknown operation. Please contact RXO representative."
+          },
+          "500": {
+            "description": "Internal Server Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadsSearchService/rest/v1/availableloads/": {
+      "post": {
+        "description": "Search Available Loads API works on a pull based retrieval mechanism to fetch available loads based on partner, username in batches upto 100. The request must contain valid API key and token as header parameters to search available loads request.\n Additionally, the request may contain the pickup and /or delivery date range to filter  loads of specific dates. Please note, the pickup and delivery range results provided would be within the carrier's cargo insurance validity.\n The response presents load details, stops, requirements and also aggregrated equipment and commodity details for the loads that are available. \n Please ensure, that in order to get latest updates for the loads, this API would need to be invoked by passing last refreshed timestamp",
+        "operationId": "Search available loads",
+        "security": [
+          {
+            "api_key": []
+          }
+        ],
+        "tags": [
+          "Loads"
+        ],
+        "parameters": [
+          {
+            "required": true,
+            "in": "header",
+            "description": "Api Key as provided by RXO.",
+            "name": "x-api-key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "required": true,
+            "in": "header",
+            "description": "Valid bearer token generated using Token API.",
+            "name": "xpoauthorization",
+            "schema": {
+              "type": "string",
+              "description": "JWT Token"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "[JSON]Available load Request.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/availableloadRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/availableloadResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error400"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error 404 Unknown operation. Please contact RXO representative."
+          },
+          "500": {
+            "description": "Internal Server Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/BidBookNowService/rest/v1/booknow/": {
+      "post": {
+        "description": "Book a load API allows buying a load provided the hazmat, insurance eligibility criterion are met.\n The request must contain valid API key and token as header parameters to place a book load now request. \n Once the book now request is placed and the API responds as success then it means that transaction is received . However, please note, the load assignment is not yet confirmed as in background it would take a few seconds to finish the load assignment. \n Only when the load is assigned, the carrier contact will receive rate confirmation via email. Inorder to avoid rebooking or showing assigned loads in loadboard, it is recommended to refresh the loadboard after few seconds on book now placement.",
+        "operationId": "Book a load",
+        "security": [
+          {
+            "api_key": []
+          }
+        ],
+        "tags": [
+          "Loads"
+        ],
+        "parameters": [
+          {
+            "required": true,
+            "in": "header",
+            "description": "Api Key as provided by RXO.",
+            "name": "x-api-key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "required": true,
+            "in": "header",
+            "description": "Valid bearer token generated using Token API.",
+            "name": "xpoauthorization",
+            "schema": {
+              "type": "string",
+              "description": "JWT Token"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "[JSON]Book a Load Request",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/bookNowRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/bookNowResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error400"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error 404 Unknown operation. Please contact RXO representative."
+          },
+          "500": {
+            "description": "Internal Server Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/carrierapi/bids/{loadBookingResponseId}/status/": {
+      "get": {
+        "description": "The Load Booking Status is a polling API that can be invoked at 1 min interval post Book Now response inorder to know the confirmation of the load booking by passing the load booking ID received from book a load API response. The request must contain valid API key and token as header parameters to check load booking status. If API is invoked in less than 1 min interval, the last cached response will be presented in response. The polling API response would be either Accepted or Rejected or Processing. The polling API needs to be retried only if previous response was Processing",
+        "operationId": "Load Booking Status",
+        "security": [
+          {
+            "api_key": []
+          }
+        ],
+        "tags": [
+          "Loads"
+        ],
+        "parameters": [
+          {
+            "required": true,
+            "in": "header",
+            "description": "Api Key as provided by RXO.",
+            "name": "x-api-key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "required": true,
+            "in": "header",
+            "description": "Valid bearer token generated using Token API.",
+            "name": "xpoauthorization",
+            "schema": {
+              "type": "string",
+              "description": "JWT Token"
+            }
+          },
+          {
+            "required": true,
+            "in": "path",
+            "description": "Load Booking Id",
+            "name": "loadBookingResponseId",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Accepted, Rejected, or Processing",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/status"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error400"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error401"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error 404 Unknown operation. Please contact RXO representative."
+          },
+          "500": {
+            "description": "Internal Server Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error500"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "tokenrequest": {
+        "type": "object",
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "description": "Client Id as provided by RXO."
+          },
+          "client_secret": {
+            "type": "string",
+            "description": "Client Secret as provided by RXO."
+          },
+          "scope": {
+            "type": "string",
+            "description": "Scope as provided by RXO to access requested API."
+          },
+          "grant_type": {
+            "type": "string",
+            "description": "Grant Type, typical value is client_credentials."
+          }
+        },
+        "required": [
+          "client_id",
+          "client_secret",
+          "scope",
+          "grant_type"
+        ],
+        "example": {
+          "client_id": "xpo-tran-boomi-test-app",
+          "client_secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "scope": "xpo-connect-api",
+          "grant_type": "client_credentials"
+        }
+      },
+      "errorDetails": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "description": "Error message."
+        },
+        "description": "Error details while generating quotes."
+      },
+      "successtoken": {
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "description": "Returned Bearer token to be used for subsequent API calls.",
+            "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU1OEQ3N0M3MEE2MkRCMUQwMDYwODRCNUNCREI0QkVBMUJGRjhGM0YiLCJ0eXAiOiJKV1QiLCJ4NXQiOiI1WTEzeHdwaTJ4MEFZSVMxeTl0TDZodl9qejgifQ.eyJuYmYiOjE1ODc1NzQxMDYsImV4cCI6MTU4NzU4MTMwNiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi1zYW5kYm94LmF1dGh4cG8uY29tIiwiYXVkIjpbImh0dHBzOi8vbG9naW4tc2FuZGJveC5hdXRoeHBvLmNvbS9yZXNvdXJjZXMiLCJ4cG8tcmF0ZXMtYXBpIl0sImNsaWVudF9pZCI6Inhwby1rcmFmdC1oZWluei1pbnRlZ3JhdGlvbiIsInNjb3BlIjpbInhwby1yYXRlcy1hcGkiXX0.dnoOVJQdZTFTUIY8uWf4izO7gLmY8fIXZ4N7tlWMhxkZdk6uD8VtOoY8BaJodruSpYXD2qDDHBKQe0VN-VGFBOyjx1hBXt7MSNJM_KP9H66m1VVGouuO4NV9knhTogUK_Mmt4wsfUhpFhR6MZDPkDFkLI7RpajcOfqJCQE8w7dq_AWpcD8R1sWozWcuaJHZ9su0d6x_FIwbA58iZXi7Mw1iWBPi1uuemo3iL5sKyng8V5Pp3IPELUgTFxugtcIEkw9uw3NMcXhT6qLUzfjFaXGJMyxHY-P2VaCgrt6FURkltvef9kqd2_5mB-oJNB4CEqIw9QLOHcW62OnIoi_6Tiw"
+          },
+          "expires_in": {
+            "type": "integer",
+            "description": "Amount of time till token is valid. **7200 seconds (2 hours).**",
+            "example": 7200
+          },
+          "token_type": {
+            "type": "string",
+            "description": "Type of token. **Bearer.**",
+            "example": "Bearer"
+          },
+          "scope": {
+            "type": "string",
+            "description": "Scopeas provided by RXO to access requested API",
+            "example": "xpo-connect-api"
+          }
+        }
+      },
+      "error401": {
+        "properties": {
+          "statusCode": {
+            "type": "string",
+            "description": "Status Code value.",
+            "example": "401"
+          },
+          "message": {
+            "type": "string",
+            "description": "Unauthorized.",
+            "example": "Unauthorized"
+          },
+          "context": {
+            "type": "array",
+            "description": "Error details.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Key": {
+                  "type": "string",
+                  "description": "Error context key.",
+                  "example": "TOKEN_VALIDATION"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Error context value,.",
+                  "example": "Token has expired."
+                }
+              }
+            }
+          }
+        }
+      },
+      "error400": {
+        "properties": {
+          "statusCode": {
+            "type": "string",
+            "description": "Status Code value.",
+            "example": "400"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error Message.",
+            "example": "Bad Request"
+          },
+          "context": {
+            "type": "array",
+            "description": "Error details.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Key": {
+                  "type": "string",
+                  "description": "Error context key.",
+                  "example": "TOKEN_GENERATION_FAILED"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Error context value,.",
+                  "example": "Invalid Client"
+                }
+              }
+            }
+          }
+        }
+      },
+      "error500": {
+        "properties": {
+          "statusCode": {
+            "type": "string",
+            "description": "Status Code value.",
+            "example": "500"
+          },
+          "message": {
+            "type": "string",
+            "description": "Internal server error.",
+            "example": "Internal server error"
+          },
+          "context": {
+            "type": "array",
+            "description": "Error details.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Key": {
+                  "type": "string",
+                  "description": "Error context key.",
+                  "example": "BACKEND_SERVICE_COMMUNICATION"
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Error context value,.",
+                  "example": "Error communicating with the backend service."
+                }
+              }
+            }
+          }
+        }
+      },
+      "availableloadRequest": {
+        "type": "object",
+        "properties": {
+          "partnerIdentifierCode": {
+            "type": "string",
+            "description": "Partner identifier code used to uniquely identify the partner"
+          },
+          "userName": {
+            "type": "string",
+            "description": "The email id of the user"
+          },
+          "pickupDate": {
+            "type": "object",
+            "properties": {
+              "min": {
+                "type": "string",
+                "description": "Specify the minimum value of pickup date range. Date format to be in MM/dd/yyyy"
+              },
+              "max": {
+                "type": "string",
+                "description": "Specify the maximum value of pickup date range. Date format to be in MM/dd/yyyy"
+              }
+            }
+          },
+          "deliveryDate": {
+            "type": "object",
+            "properties": {
+              "min": {
+                "type": "string",
+                "description": "Specify the minimum value of delivery date range. Date format to be in MM/dd/yyyy"
+              },
+              "max": {
+                "type": "string",
+                "description": "Specify the maximum value of delivery date range. Date format to be in MM/dd/yyyy"
+              }
+            }
+          },
+          "pageNumber": {
+            "type": "integer",
+            "description": "Allows partner to set which page of the result to consume"
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "Allows partner to set how many results to include in a page. Max results in a page is upto 100."
+          },
+          "deltaLoadsLastRefreshedTimestampInUTC": {
+            "type": "string",
+            "description": "Specify the last loadboard refreshed timestamp in UTC. Date format to be in MM/dd/yyyy HH:mm:ss"
+          }
+        },
+        "required": [
+          "partnerIdentifierCode",
+          "userName",
+          "pageNumber",
+          "pageSize"
+        ]
+      },
+      "availableloadResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "description": "Current page number"
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "Count of available loads in a page"
+          },
+          "totalItemCount": {
+            "type": "integer",
+            "description": "Total count of available loads"
+          },
+          "totalPagesCount": {
+            "type": "integer",
+            "description": "Total pages available for the filter applied"
+          },
+          "currencyCode": {
+            "type": "string",
+            "description": "The currency code of the rate information of the loads"
+          },
+          "dimensionUomCode": {
+            "type": "string",
+            "description": "The dimension unit of the loads"
+          },
+          "distanceUomCode": {
+            "type": "string",
+            "description": "The distance unit of the loads"
+          },
+          "temperatureUomCode": {
+            "type": "string",
+            "description": "The temperature unit of the loads"
+          },
+          "weightUomCode": {
+            "type": "string",
+            "description": "The weight unit of the loads"
+          },
+          "loadEquipment": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "The equipment code"
+              },
+              "count": {
+                "type": "integer",
+                "description": "Count of available loads that has the same equipment in the load"
+              },
+              "name": {
+                "type": "string",
+                "description": "The equipment name"
+              },
+              "sortOrder": {
+                "type": "integer",
+                "description": "The sort order"
+              }
+            }
+          },
+          "loads": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "sourceApplicationKey": {
+                  "type": "string",
+                  "description": "Source application key"
+                },
+                "tripCode": {
+                  "type": "string",
+                  "description": "The unique load identifier code"
+                },
+                "orderNumber": {
+                  "type": "string",
+                  "description": "Customer's order number used to uniquely identify order"
+                },
+                "totalDistance": {
+                  "type": "string",
+                  "description": "Total Distance of the trip"
+                },
+                "equipmentType": {
+                  "type": "string",
+                  "description": "Type of equipment"
+                },
+                "equipmentCategory": {
+                  "type": "string",
+                  "description": "Category of equipment"
+                },
+                "totalWeight": {
+                  "type": "number",
+                  "format": "double",
+                  "description": "Total Weight"
+                },
+                "loadPrice": {
+                  "type": "number",
+                  "format": "double",
+                  "description": "The load price"
+                },
+                "ratePerDistance": {
+                  "type": "number",
+                  "format": "double",
+                  "description": "Rate per distance"
+                },
+                "isReviewed": {
+                  "type": "boolean",
+                  "description": "Indicates if load is reviewed"
+                },
+                "isHotDeal": {
+                  "type": "boolean",
+                  "description": "Indicates if load is a hot deal"
+                },
+                "isAppointmentConfirmed": {
+                  "type": "boolean",
+                  "description": "Indicates if the appointment is confirmed for all stops of the load"
+                },
+                "representative": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "The representative name"
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "The representative email"
+                    },
+                    "phoneNumber": {
+                      "type": "string",
+                      "description": "The representative phone number"
+                    },
+                    "userName": {
+                      "type": "string",
+                      "description": "The representative username"
+                    }
+                  }
+                },
+                "stops": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "cityName": {
+                        "type": "string",
+                        "description": "The city name"
+                      },
+                      "countryName": {
+                        "type": "string",
+                        "description": "The country name"
+                      },
+                      "scheduledArrivalEarlyDate": {
+                        "type": "string",
+                        "description": "The scheduled arrival early date. The date format is  MM/dd/yyyy"
+                      },
+                      "scheduledArrivalEarlyTime": {
+                        "type": "string",
+                        "description": "The scheduled arrival early time. The time format is HH:mm:ss. If the time is null and isAppointmentConfirmed is false for the load then it indicates that appointment time is not confirmed. Carrier needs to call representative to confirm the appointment of stop"
+                      },
+                      "scheduledArrivalLateDate": {
+                        "type": "string",
+                        "description": "The scheduled arrival late date. The date format is  MM/dd/yyyy"
+                      },
+                      "scheduledArrivalLateTime": {
+                        "type": "string",
+                        "description": "The scheduled arrival late time. The time format is HH:mm:ss. If the time is null and isAppointmentConfirmed is false for the load then it indicates that appointment time is not confirmed. Carrier needs to call representative to confirm the appointment of stop"
+                      },
+                      "stateCode": {
+                        "type": "string",
+                        "description": "The state code"
+                      },
+                      "zipCode": {
+                        "type": "string",
+                        "description": "The zip code"
+                      },
+                      "timeZoneCode": {
+                        "type": "string",
+                        "description": "The time zone code"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "The stop type"
+                      },
+                      "sequenceNumber": {
+                        "type": "integer",
+                        "description": "The sequence number of the stop"
+                      }
+                    }
+                  }
+                },
+                "commodities": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "commodityName": {
+                        "type": "string",
+                        "description": "The commodity name"
+                      },
+                      "quantity": {
+                        "type": "integer",
+                        "description": "The commodity quantity"
+                      },
+                      "weight": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The commodity weight"
+                      },
+                      "isHazmat": {
+                        "type": "boolean",
+                        "description": "Indicates if the commodity is hazardous"
+                      },
+                      "unitTypeCode": {
+                        "type": "string",
+                        "description": "The unit type code"
+                      },
+                      "weightUomCode": {
+                        "type": "string",
+                        "description": "The weight unit of the commodity"
+                      },
+                      "dimensionUomCode": {
+                        "type": "string",
+                        "description": "The dimension unit of the commodity"
+                      },
+                      "length": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The length of the commodity"
+                      },
+                      "width": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The width of the commodity"
+                      },
+                      "height": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The height of the commodity"
+                      },
+                      "temperatureHigh": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The commodity's max value of temperature"
+                      },
+                      "temperatureLow": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The commodity's min value of temperature"
+                      },
+                      "unNumber": {
+                        "type": "number",
+                        "format": "double",
+                        "description": "The commodity's un number"
+                      }
+                    }
+                  }
+                },
+                "notes": {
+                  "type": "object",
+                  "properties": {
+                    "isHot": {
+                      "type": "boolean",
+                      "description": "Indicates if note is a hot note"
+                    },
+                    "text": {
+                      "type": "string",
+                      "description": "The note text"
+                    },
+                    "modificationDate": {
+                      "type": "string",
+                      "description": "The note date in MM/dd/yyyy"
+                    },
+                    "modificationTime": {
+                      "type": "string",
+                      "description": "The note time in HH:mm"
+                    },
+                    "noteTypeCode": {
+                      "type": "string",
+                      "description": "The note type code"
+                    },
+                    "objectTypeCode": {
+                      "type": "string",
+                      "description": "The object type code. If ORDER, then it indicates order level notes. If STOP, then it indicates stop level notes"
+                    }
+                  }
+                },
+                "orderRequirements": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "requirementCategoryCode": {
+                        "type": "string",
+                        "description": "The order requirement category code"
+                      },
+                      "requirementCategoryName": {
+                        "type": "string",
+                        "description": "The order requirement category name"
+                      },
+                      "requirementParameters": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "requirementParameterCode": {
+                              "type": "string",
+                              "description": "The order requirement parameter code"
+                            },
+                            "requirementParameterName": {
+                              "type": "string",
+                              "description": "The order requirement parameter name"
+                            },
+                            "configurableParameters": {
+                              "type": "array",
+                              "items": {
+                                "properties": {
+                                  "configurableParameterCode": {
+                                    "type": "string",
+                                    "description": "The order requirement's configurable parameter code"
+                                  },
+                                  "configurableParameterName": {
+                                    "type": "string",
+                                    "description": "The order requirement's configurable parameter name"
+                                  },
+                                  "configurableTextValue": {
+                                    "type": "string",
+                                    "description": "The order requirement's configurable text value"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "stopRequirements": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "requirementCategoryCode": {
+                        "type": "string",
+                        "description": "The stop requirement category code"
+                      },
+                      "requirementCategoryName": {
+                        "type": "string",
+                        "description": "The stop requirement category name"
+                      },
+                      "requirementParameters": {
+                        "type": "array",
+                        "items": {
+                          "properties": {
+                            "requirementParameterCode": {
+                              "type": "string",
+                              "description": "The stop requirement parameter code"
+                            },
+                            "requirementParameterName": {
+                              "type": "string",
+                              "description": "The stop requirement parameter name"
+                            },
+                            "configurableParameters": {
+                              "type": "array",
+                              "items": {
+                                "properties": {
+                                  "configurableParameterCode": {
+                                    "type": "string",
+                                    "description": "The stop requirement's configurable parameter code"
+                                  },
+                                  "configurableParameterName": {
+                                    "type": "string",
+                                    "description": "The stop requirement's configurable parameter name"
+                                  },
+                                  "configurableTextValue": {
+                                    "type": "string",
+                                    "description": "The stop requirement's configurable text value"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "stopSequenceNumber": {
+                        "type": "integer",
+                        "description": "The stop sequence number"
+                      }
+                    }
+                  }
+                },
+                "requirements": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "description": "The requirement code Values like \"C-TPAT\", \"CSA\",\"CUSTOMSBROKER\", \"DROPANDHOOK\", \"FAST\",\"HAZMAT\",\"PIP\",\"SMARTWAY\",\"TSA\", \"TWICCARD\", \"UIIACARD\",\"ADR\".If the load is hazmat, the requirements array will contain \"HAZMAT\""
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "The requirement name"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "bookNowRequest": {
+        "type": "object",
+        "properties": {
+          "tripCode": {
+            "type": "string",
+            "description": "Identifier for the load"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double",
+            "description": "Load price"
+          },
+          "currencyCode": {
+            "type": "string",
+            "description": "The currency code. Pass as USD always"
+          },
+          "partnerIdentifierCode": {
+            "type": "string",
+            "description": "Partner identifier code used to uniquely identify the partner"
+          },
+          "sourceApplicationKey": {
+            "type": "string",
+            "description": "Source application key"
+          },
+          "carrierContactName": {
+            "type": "string",
+            "description": "Carrier contact name"
+          },
+          "contactEmail": {
+            "type": "string",
+            "description": "Carrier contact email"
+          },
+          "orderNumber": {
+            "type": "string",
+            "description": "Customer's order number used to uniquely identify order"
+          },
+          "carrierRepUserName": {
+            "type": "string",
+            "description": "Carrier representative's user name"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Comments or notes to be provided to the transaction. Max characters upto 100"
+          },
+          "buyPrice": {
+            "type": "number",
+            "format": "double",
+            "description": "Price for which the load is booked"
+          },
+          "tenderStatus": {
+            "type": "string",
+            "description": "Identifier for the transaction type and source. Pass as ExternalCarrierBIN"
+          },
+          "responseStatus": {
+            "type": "string",
+            "description": "Identifier for the response type. Pass as BuyItNow"
+          },
+          "transactionFlag": {
+            "type": "string",
+            "description": "Identifier for the transaction type. Pass as BIN"
+          },
+          "carrierRepContactEmail": {
+            "type": "string",
+            "description": "Carrier representative's email"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "Carrier contact's phone number. eg: 1xxxxxxxxxx"
+          }
+        },
+        "required": [
+          "tripCode",
+          "amount",
+          "currencyCode",
+          "partnerIdentifierCode",
+          "sourceApplicationKey",
+          "carrierContactName",
+          "contactEmail",
+          "orderNumber",
+          "carrierRepUserName",
+          "buyPrice",
+          "tenderStatus",
+          "responseStatus",
+          "transactionFlag",
+          "carrierRepContactEmail",
+          "orderCode"
+        ]
+      },
+      "bookNowResponse": {
+        "type": "object",
+        "properties": {
+          "orderNumber": {
+            "type": "string",
+            "description": "Customer's order number used to uniquely identify order"
+          },
+          "message": {
+            "type": "string",
+            "description": "Message containing details of the processed transaction"
+          },
+          "loadBookingResponseId": {
+            "type": "integer",
+            "description": "Load booking id. This will hold a null value when unsuccessful"
+          }
+        }
+      },
+      "status": {
+        "type": "string",
+        "description": "Accepted, Rejected, or Processing"
+      }
+    }
+  }
+}

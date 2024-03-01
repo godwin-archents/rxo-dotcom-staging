@@ -1,0 +1,33 @@
+/************ Homepage ************/
+body .customer-logo-gallery.wp-block-gallery {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+
+	> figure {
+		width: auto !important;
+		max-width: 190px !important;
+	}
+
+	@media (max-width: 799px) {
+		& {
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 0;
+			> figure {
+				width: 190px !important;
+				flex: 1 0 33%;
+				max-width: 190px !important;
+			}
+		}
+	}
+	@media (max-width: 599px) {
+		& {
+			> figure {
+				width: 132px !important;
+				flex: 1 0 50%;
+				max-width: 190px !important;
+			}
+		}
+	}
+}
