@@ -16,5 +16,6 @@ jobs:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
         WPE_ENV: <<Update-Prod-Env-Once-Ready>>
         # Deploy Options
-        REMOTE_PATH: "wp-content/"
+        SRC_PATH: "wp-content/themes/rxo"
+        REMOTE_PATH: "wp-content/themes/rxo"
         CACHE_CLEAR: TRUE
